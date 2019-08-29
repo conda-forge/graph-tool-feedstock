@@ -26,7 +26,7 @@ source:
     - patches/no-max-element-graph-blockmodel.patch  # [osx]
 
 build:
-  skip: true  # [win or py != 37]
+  skip: true  # [win]
   number: 0
   detect_binary_files_with_prefix: true
 
