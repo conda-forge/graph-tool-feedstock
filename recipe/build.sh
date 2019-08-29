@@ -10,7 +10,7 @@ export BOOST_ROOT="${PREFIX}"
 
 # Explicitly set this, which is used in configure.
 # (We patched away the auto-detection of this variable.)
-export BOOST_PYTHON_LIB=boost_python37
+export BOOST_PYTHON_LIB=boost_python${CONDA_PY}
 
 # Note about PYTHON_LIBS:
 # If left unset, the configure script will set PYTHON_LIBS as follows:
