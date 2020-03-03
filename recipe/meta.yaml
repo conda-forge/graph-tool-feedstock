@@ -25,9 +25,14 @@ source:
     - patches/no-max-element-graph-adjacency.patch   # [osx]
     - patches/no-max-element-graph-blockmodel.patch  # [osx]
 
+    # Fix autoconf detection of CGAL 5.
+    # Patch taken from master branch; won't be necessary in graph-tool 2.30
+    # https://git.skewed.de/count0/graph-tool/-/commit/95c0d9f02578b907bb5acca6eadf05c81f059240    
+    - patches/fix-cgal-5-autoconf.patch
+
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -52,7 +57,7 @@ requirements:
     - expat
     - scipy >=1.0
     - gmp
-    - cgal 4.14*
+    - cgal-cpp 5.0*
     - sparsehash 2.0*
     - cairomm
     - pycairo
@@ -66,7 +71,6 @@ requirements:
     - scipy >=1.0
     - {{ pin_compatible('numpy') }}
     - gmp
-    - cgal >=4.14
     - sparsehash >=2.0
     - cairomm
     - pycairo
