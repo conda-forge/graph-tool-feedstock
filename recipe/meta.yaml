@@ -35,6 +35,16 @@ build:
   number: 1
   detect_binary_files_with_prefix: true
 
+  # conda-build 3.18.12 uses LIEF instead of patchelf,
+  # which may be causing problems for this recipe.
+  # We can force it to use patchelf with this setting.
+  # There might be other bugs related to LIEF, too:
+  # - https://github.com/conda-forge/staged-recipes/pull/10979#issuecomment-595388237
+  # - https://github.com/lief-project/LIEF/issues/239
+  # 
+  # (Maybe this setting won't be needed in a later version of conda-build.)
+  rpaths_patcher: patchelf  # [linux]
+
 requirements:
   build:
     - libtool
