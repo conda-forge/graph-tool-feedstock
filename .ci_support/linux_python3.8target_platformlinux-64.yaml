@@ -1,0 +1,36 @@
+boost:
+- '1.72'
+boost_cpp:
+- '1.72'
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- gxx
+cxx_compiler_version:
+- '7'
+docker_image:
+- condaforge/linux-anvil-comp7
+expat:
+- '2.2'
+gmp:
+- '6'
+numpy:
+- '1.14'
+pin_run_as_build:
+  boost:
+    max_pin: x.x.x
+  boost-cpp:
+    max_pin: x.x.x
+  expat:
+    max_pin: x.x
+  gmp:
+    max_pin: x
+  python:
+    min_pin: x.x
+    max_pin: x.x
+python:
+- '3.8'
+target_platform:
+- linux-64
