@@ -32,7 +32,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 2
+  number: 3
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
@@ -88,11 +88,13 @@ requirements:
     - librsvg
     - gtk3
     - pygobject
+    - matplotlib
 
 test:
   imports:
     - graph_tool
     - graph_tool.all
+    - graph_tool.draw
 
 about:
   home: https://graph-tool.skewed.de/
