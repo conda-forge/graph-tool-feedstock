@@ -31,7 +31,7 @@ source run_conda_forge_build_setup
 # "recipe/yum_requirements.txt" file. After updating that file,
 # run "conda smithy rerender" and this line will be updated
 # automatically.
-/usr/bin/sudo -n yum install -y libX11 libXcomposite libXcursor libXdamage libXext libXfixes libXi libXinerama libXrandr
+/usr/bin/sudo -n yum install -y libX11 libXcomposite libXcursor libXdamage libXext libXfixes libXi libXinerama libXrandr xorg-x11-server-Xorg
 
 
 # make the build number clobber
