@@ -95,6 +95,7 @@ test:
     - graph_tool
     - graph_tool.all
     - graph_tool.draw
+    - graph_tool.draw.cairo_draw
 
 about:
   home: https://graph-tool.skewed.de/
