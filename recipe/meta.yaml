@@ -88,7 +88,7 @@ test:
 about:
   home: https://graph-tool.skewed.de/
   summary: Efficient network analysis
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_file:
     - licenses/LICENSE
     - licenses/pcg-cpp/LICENSE-APACHE.txt
