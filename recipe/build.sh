@@ -12,10 +12,6 @@ export BOOST_ROOT="${PREFIX}"
 # (We patched away the auto-detection of this variable.)
 export BOOST_PYTHON_LIB=boost_python${CONDA_PY}
 
-# Workaround for boost-1.72
-# https://github.com/conda-forge/graph-tool-feedstock/pull/9#issuecomment-593146711
-export CPPFLAGS="${CPPFLAGS} -DHAVE_BOOST_COROUTINE"
-
 # Note about PYTHON_LIBS:
 # If left unset, the configure script will set PYTHON_LIBS as follows:
 #
