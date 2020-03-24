@@ -100,19 +100,36 @@ Current release info
 Installing graph-tool
 =====================
 
-Installing `graph-tool` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+The easiest way to install `graph-tool` is to create a new environment and install it there:
+
+```
+conda create --name gt -c conda-forge graph-tool
+conda activate gt
+```
+
+After that, install additional packages to the environment as needed:
+
+```
+conda install -n gt -c conda-forge ipython jupyter
+```
+
+You can also install `graph-tool` to a pre-existing environment with the following command,
+but the solver is likely to fail (or hang) if your environment already contains many
+packages already, whose dependencies may conflict with the `graph-tool` dependencies.
+This is particularly likely if your environment contains packages from the official
+`Anaconda` distribution, rather than the `conda-forge` distribution.
+
+```
+conda install -c conda-forge graph-tool
+```
+
+Note: Rather than specifying `-c conda-forge` on every command, you can add `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `graph-tool` can be installed with:
-
-```
-conda install graph-tool
-```
-
-It is possible to list all of the versions of `graph-tool` available on your platform with:
+It is possible to list all of the versions of `graph-tool` available for your platform with:
 
 ```
 conda search graph-tool --channel conda-forge
