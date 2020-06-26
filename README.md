@@ -3,7 +3,7 @@ About graph-tool
 
 Home: https://graph-tool.skewed.de/
 
-Package license: GPL-3.0-or-later
+Package license: LGPL-3.0-or-later
 
 Feedstock license: BSD 3-Clause
 
