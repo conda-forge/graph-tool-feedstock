@@ -1,5 +1,3 @@
-DO NOT MERGE: I'm just re-building v2.32 to help us debug the problem in https://github.com/conda-forge/graph-tool-feedstock/pull/23.
-
 About graph-tool
 ================
 
@@ -7,7 +5,7 @@ Home: https://graph-tool.skewed.de/
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Efficient network analysis
 
