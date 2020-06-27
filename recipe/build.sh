@@ -2,8 +2,9 @@
 
 set -x
 
+# We do want -O3 (the default CXXFLAGS imposes -O2)
 export CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
-export CXXFLAGS="${CXXFLAGS} -I${PREFIX}/include -std=c++17"
+export CXXFLAGS="${CXXFLAGS} -I${PREFIX}/include -std=c++17 -O3"
 export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
 
 export BOOST_ROOT="${PREFIX}"
@@ -33,10 +34,10 @@ if [[ $target_platform == osx* ]]; then
     # See note above about PYTHON_LIBS.
     export LDFLAGS="${LDFLAGS} -undefined dynamic_lookup"
 
-	if [[ "$CI" == "azure" ]]; then
-	    # https://github.com/conda-forge/conda-forge-ci-setup-feedstock/issues/53#issuecomment-490314561
-	    export CPU_COUNT=4
-	fi
+    if [[ "$CI" == "azure" ]]; then
+        # https://github.com/conda-forge/conda-forge-ci-setup-feedstock/issues/53#issuecomment-490314561
+        export CPU_COUNT=4
+    fi
 fi
 
 echo "Building with CPU_COUNT=${CPU_COUNT}"
@@ -51,9 +52,7 @@ echo "Building with CPU_COUNT=${CPU_COUNT}"
     --with-cgal="${PREFIX}" \
     --disable-debug \
     --disable-dependency-tracking \
-    PYTHON_LIBS="${PYTHON_LIBS}" \
-##
-
+    PYTHON_LIBS="${PYTHON_LIBS}"
 
 ##
 ## Building graph-tool requires a ton of RAM, which constrains the
@@ -73,9 +72,9 @@ echo "Building with CPU_COUNT=${CPU_COUNT}"
 echo "[inference] Starting make"
 cd src/graph/inference
 if [[ $target_platform == osx* ]]; then
-	make -j2
+    make -j2
 else
-	make
+    make -j1
 fi
 cd -
 
