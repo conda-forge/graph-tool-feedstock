@@ -19,6 +19,10 @@ source:
     - patches/skip-boost-python-config.patch
 
 build:
+  # We can't build the linux packages on conda-forge CI services, due to out-of-memory errors.
+  # See https://github.com/conda-forge/graph-tool-feedstock/pull/23 for discussion.
+  # To build this package locally, remove the following line and run ./build-locally.py
+  skip: true  # [linux]
   skip: true  # [win]
   number: 0
   detect_binary_files_with_prefix: true
