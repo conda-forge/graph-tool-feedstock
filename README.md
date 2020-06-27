@@ -1,3 +1,5 @@
+DO NOT MERGE: I'm just re-building v2.32 to help us debug the problem in https://github.com/conda-forge/graph-tool-feedstock/pull/23.
+
 About graph-tool
 ================
 
