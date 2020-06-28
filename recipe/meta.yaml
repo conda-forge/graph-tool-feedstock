@@ -1,5 +1,5 @@
-{% set version = "2.32" %}
-{% set sha1 = "24d526504d6f88369fe5c397f067327f1e94dbb2" %}
+{% set version = "2.33" %}
+{% set sha1 = "e0018462c998b4339ce9b413377edd0284e7c109" %}
 
 package:
   name: graph-tool
@@ -19,6 +19,10 @@ source:
     - patches/skip-boost-python-config.patch
 
 build:
+  # We can't build the linux packages on conda-forge CI services, due to out-of-memory errors.
+  # See https://github.com/conda-forge/graph-tool-feedstock/pull/23 for discussion.
+  # To build this package locally, remove the following line and run ./build-locally.py
+  skip: true  # [linux]
   skip: true  # [win]
   number: 0
   detect_binary_files_with_prefix: true
@@ -88,9 +92,10 @@ test:
 about:
   home: https://graph-tool.skewed.de/
   summary: Efficient network analysis
-  license: GPL-3.0-or-later
+  license: LGPL-3.0-or-later
   license_file:
     - licenses/LICENSE
+    - licenses/LICENSE.LESSER
     - licenses/pcg-cpp/LICENSE-APACHE.txt
     - licenses/pcg-cpp/LICENSE-MIT.txt
 
