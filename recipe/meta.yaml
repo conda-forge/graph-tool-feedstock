@@ -24,7 +24,7 @@ build:
   # To build this package locally, remove the following line and run ./build-locally.py
   skip: true  # [linux]
   skip: true  # [win]
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
