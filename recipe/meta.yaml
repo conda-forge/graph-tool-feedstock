@@ -1,5 +1,5 @@
-{% set version = "2.33" %}
-{% set sha1 = "e0018462c998b4339ce9b413377edd0284e7c109" %}
+{% set version = "2.35" %}
+{% set sha1 = "b6a4400d06b55d38e23af7cd7df405617ee9c02e" %}
 
 package:
   name: graph-tool
@@ -19,10 +19,6 @@ source:
     - patches/skip-boost-python-config.patch
 
 build:
-  # We can't build the linux packages on conda-forge CI services, due to out-of-memory errors.
-  # See https://github.com/conda-forge/graph-tool-feedstock/pull/23 for discussion.
-  # To build this package locally, remove the following line and run ./build-locally.py
-  skip: true  # [linux]
   skip: true  # [win]
   number: 0
   detect_binary_files_with_prefix: true
@@ -48,8 +44,8 @@ requirements:
 
     # On mac, requires clang 8
     # (clang 4 does not have sufficient c++17 support)
-    - clangxx_osx-64 >=8*    # [osx]
-    - llvm-openmp            # [osx]
+    - clangxx_osx-64 >=8   # [osx]
+    - llvm-openmp 	   # [osx]
 
   host:
     - python
@@ -81,6 +77,7 @@ requirements:
     - gtk3
     - pygobject
     - matplotlib-base
+    - zstandard
 
 test:
   imports:
