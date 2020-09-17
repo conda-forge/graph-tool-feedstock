@@ -44,8 +44,8 @@ requirements:
 
     # On mac, requires clang 8
     # (clang 4 does not have sufficient c++17 support)
-    - clangxx_osx-64 >=8   # [osx]
-    - llvm-openmp 	   # [osx]
+    - clangxx_osx-64 >=8    # [osx]
+    - llvm-openmp           # [osx]
 
   host:
     - python
