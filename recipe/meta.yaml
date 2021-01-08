@@ -59,6 +59,7 @@ requirements:
     - sparsehash 2.0*
     - cairomm
     - pycairo
+    - glib
 
   run:
     - python
@@ -78,6 +79,7 @@ requirements:
     - pygobject
     - matplotlib-base
     - zstandard
+    - glib
 
 test:
   imports:
