@@ -12,6 +12,8 @@ expat:
 - '2.2'
 gdk_pixbuf:
 - '2'
+glib:
+- '2.58'
 gmp:
 - '6'
 macos_machine:
