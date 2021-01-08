@@ -1,14 +1,11 @@
-{% set version = "2.35" %}
-{% set sha1 = "b6a4400d06b55d38e23af7cd7df405617ee9c02e" %}
-
 package:
   name: graph-tool
-  version: {{ version }}
+  version: 2.36.a1
 
 source:
-  fn: graph-tool-{{ version }}.tar.bz2
-  url: https://downloads.skewed.de/graph-tool/graph-tool-{{ version }}.tar.bz2
-  sha1: {{ sha1 }}
+  git_url: https://git.skewed.de/count0/graph-tool
+  git_rev: master
+  git_depth: 1
 
   patches:
     # Don't let configure test the python configuration via a test module;
