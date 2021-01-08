@@ -1,7 +1,9 @@
 boost:
-- 1.72.0
+- 1.74.0
 boost_cpp:
-- 1.72.0
+- 1.74.0
+cdt_name:
+- cos6
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -9,13 +11,13 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '7'
+- '9'
 docker_image:
-- condaforge/linux-anvil-comp7
+- quay.io/condaforge/linux-anvil-comp7
 expat:
 - '2.2'
 gdk_pixbuf:
-- 2.36.12
+- '2'
 gmp:
 - '6'
 numpy:
@@ -27,8 +29,6 @@ pin_run_as_build:
     max_pin: x.x.x
   expat:
     max_pin: x.x
-  gdk_pixbuf:
-    max_pin: x.x.x
   gmp:
     max_pin: x
   python:
