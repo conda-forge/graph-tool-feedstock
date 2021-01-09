@@ -76,7 +76,6 @@ requirements:
     - pygobject
     - matplotlib-base
     - zstandard
-    - glib
 
 test:
   imports:
