@@ -1,9 +1,9 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 boost:
-- 1.72.0
+- 1.74.0
 boost_cpp:
-- 1.72.0
+- 1.74.0
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -11,7 +11,9 @@ channel_targets:
 expat:
 - '2.2'
 gdk_pixbuf:
-- 2.36.12
+- '2'
+glib:
+- '2.58'
 gmp:
 - '6'
 macos_machine:
@@ -25,15 +27,13 @@ pin_run_as_build:
     max_pin: x.x.x
   expat:
     max_pin: x.x
-  gdk_pixbuf:
-    max_pin: x.x.x
   gmp:
     max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.7.* *_cpython
+- 3.6.* *_cpython
 target_platform:
 - osx-64
 zip_keys:
