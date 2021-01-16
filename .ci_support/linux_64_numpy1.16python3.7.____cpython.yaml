@@ -19,7 +19,7 @@ expat:
 gdk_pixbuf:
 - '2'
 glib:
-- '2.58'
+- '2.66'
 gmp:
 - '6'
 numpy:
