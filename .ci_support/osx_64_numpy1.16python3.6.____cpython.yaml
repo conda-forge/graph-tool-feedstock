@@ -8,12 +8,16 @@ channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
+cxx_compiler:
+- clangxx
+cxx_compiler_version:
+- '11'
 expat:
 - '2.2'
 gdk_pixbuf:
 - '2'
 glib:
-- '2.58'
+- '2.66'
 gmp:
 - '6'
 macos_machine:
