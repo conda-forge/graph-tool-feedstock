@@ -20,7 +20,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
@@ -39,14 +39,8 @@ requirements:
     - autoconf
     - automake
     - pkg-config
-
-    - {{ compiler("cxx") }}  # [linux]
-
-    # On mac, requires clang 8
-    # (clang 4 does not have sufficient c++17 support)
-    - clangxx_osx-64 >=8    # [osx]
+    - {{ compiler("cxx") }}
     - llvm-openmp           # [osx]
-
   host:
     - python
     - numpy
@@ -60,7 +54,6 @@ requirements:
     - cairomm
     - pycairo
     - glib
-
   run:
     - python
     - llvm-openmp  # [osx]
