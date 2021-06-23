@@ -1,19 +1,15 @@
 diff --git configure.ac configure.ac
-index be20296a..58a5235b 100644
+index 10d4142e..af60b65f 100644
 --- configure.ac
 +++ configure.ac
-@@ -145,10 +145,13 @@ AC_SUBST(MOD_DIR)
+@@ -139,7 +139,9 @@ AC_SUBST(MOD_DIR)
  
  dnl boost
- AX_BOOST_BASE([[1.55.0]])
+ AX_BOOST_BASE([[1.58.0]])
 -AX_BOOST_PYTHON
 +#AX_BOOST_PYTHON
-+AC_DEFINE([HAVE_BOOST_PYTHON], [1], "Boost Python is available")
++AC_DEFINE([HAVE_BOOST_PYTHON], [1], "We know boost-python is available in this conda-forge recipe")
++
  if test "$BOOST_PYTHON_LIB" = ""; then
     AC_MSG_ERROR([No usable boost::python found])
  fi
-+
-+
- AX_BOOST_IOSTREAMS
- if test "$BOOST_IOSTREAMS_LIB" = ""; then
-    AC_MSG_ERROR([No usable boost::iostreams found])
