@@ -73,12 +73,13 @@ requirements:
     - matplotlib-base
     - zstandard
 
-test:
-  imports:
-    - graph_tool
-    - graph_tool.all
-    - graph_tool.draw
-    - graph_tool.draw.cairo_draw
+# See run_test.py
+# test:
+#   imports:
+#     - graph_tool
+#     - graph_tool.all
+#     - graph_tool.draw
+#     - graph_tool.draw.cairo_draw
 
 about:
   home: https://graph-tool.skewed.de/
