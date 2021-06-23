@@ -1,0 +1,13 @@
+diff --git src/graph/inference/Makefile.am src/graph/inference/Makefile.am
+index 53836428..6d031174 100644
+--- src/graph/inference/Makefile.am
++++ src/graph/inference/Makefile.am
+@@ -164,6 +164,8 @@ nobase_libgraph_tool_inference_la_include_HEADERS = \
+     loops/merge_split.hh \
+     loops/multilevel.hh \
+     support/cache.hh \
++    support/contingency.hh \
++    support/graph_neighbor_sampler.hh \
+     support/graph_state.hh \
+     support/int_part.hh \
+     support/util.hh \

@@ -18,6 +18,9 @@ source:
     # Don't use autotools to detect and test boost-python.
     - patches/skip-boost-python-config.patch
 
+    # In v2.38, src/graph/inference/Makefile.am is missing some files
+    - patches/add-missing-inference-support-headers.patch
+
 build:
   skip: true  # [win]
   number: 0
