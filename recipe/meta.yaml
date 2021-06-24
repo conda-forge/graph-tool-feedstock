@@ -21,6 +21,7 @@ source:
 build:
   skip: true  # [win]
   number: 0
+  string: np{{CONDA_NPY}}py{{CONDA_PY}}_DEBUG_BUILD
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
