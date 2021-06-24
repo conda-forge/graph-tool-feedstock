@@ -73,13 +73,18 @@ requirements:
     - matplotlib-base
     - zstandard
 
-# See run_test.py
+# See run_test.sh and _run_test.py
 # test:
 #   imports:
 #     - graph_tool
 #     - graph_tool.all
 #     - graph_tool.draw
 #     - graph_tool.draw.cairo_draw
+
+test:
+  files:
+    - _run_test.py  # Non-standard name so I can call it myself via run_test.sh
+
 
 about:
   home: https://graph-tool.skewed.de/

@@ -7,6 +7,25 @@ export CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
 export CXXFLAGS="${CXXFLAGS} -I${PREFIX}/include -std=c++17 -O3"
 export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
 
+###########################################
+###########################################
+##
+## AddressSanitizer
+##
+export CFLAGS="${CFLAGS} -fsanitize=address"
+export CXXFLAGS="${CXXFLAGS} -fsanitize=address"
+export LDFLAGS="${LDFLAGS} -fsanitize=address"
+
+if [[ $(uname) == "Darwin" ]]; then
+    export CFLAGS="${CFLAGS} -shared-libasan"
+    export CXXFLAGS="${CXXFLAGS} -shared-libasan"
+    export LDFLAGS="${LDFLAGS} -shared-libasan"
+fi
+
+###########################################
+###########################################
+
+
 export BOOST_ROOT="${PREFIX}"
 
 # Explicitly set this, which is used in configure.
