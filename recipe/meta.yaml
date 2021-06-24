@@ -1,5 +1,5 @@
-{% set version = "2.37" %}
-{% set sha1 = "30835887d658cc61d87050ce7a5574522a186b2e" %}
+{% set version = "2.40" %}
+{% set sha1 = "afafe2f7f1054e3971f0196a9523145b6fbb04f1" %}
 
 package:
   name: graph-tool
@@ -20,7 +20,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 0
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
