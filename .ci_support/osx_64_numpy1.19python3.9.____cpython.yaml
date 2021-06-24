@@ -13,11 +13,11 @@ cxx_compiler:
 cxx_compiler_version:
 - '11'
 expat:
-- '2.2'
+- '2'
 gdk_pixbuf:
 - '2'
 glib:
-- '2.66'
+- '2'
 gmp:
 - '6'
 macos_machine:
@@ -29,8 +29,6 @@ pin_run_as_build:
     max_pin: x.x.x
   boost-cpp:
     max_pin: x.x.x
-  expat:
-    max_pin: x.x
   gmp:
     max_pin: x
   python:
