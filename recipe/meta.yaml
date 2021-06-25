@@ -70,9 +70,7 @@ outputs:
         - zstandard
 
     test:
-      imports:
-        - graph_tool
-        - graph_tool.all  # Will emit a warning due to drawing not being available, but that's fine
+      script: test_base_imports.py
 
   - name: graph-tool
     requirements:
@@ -95,9 +93,7 @@ outputs:
         - pygobject
         - matplotlib-base
     test:
-      imports:
-        - graph_tool.draw
-        - graph_tool.draw.cairo_draw
+      script: test_all_imports.py
 
 about:
   home: https://graph-tool.skewed.de/
