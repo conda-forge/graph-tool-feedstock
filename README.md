@@ -7,7 +7,11 @@ Package license: LGPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/graph-tool-feedstock/blob/master/LICENSE.txt)
 
-Summary: Efficient network analysis
+Summary: Graph-tool is an efficient Python module for manipulation and statistical analysis of graphs (a.k.a. networks).
+The 'graph-tool' conda package installs graph-tool and all dependencies, including drawing dependencies.
+For users who don't need drawing support, the 'graph-tool-base' conda package installs graph-tool and
+only essential dependencies (but none for drawing).
+
 
 Current build status
 ====================
@@ -27,24 +31,24 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_numpy1.16python3.6.____cpython</td>
+              <td>linux_64_numpy1.17python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.16python3.6.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.17python3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_numpy1.16python3.7.____cpython</td>
+              <td>linux_64_numpy1.17python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.16python3.7.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.17python3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_numpy1.16python3.8.____cpython</td>
+              <td>linux_64_numpy1.17python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.16python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.17python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -55,24 +59,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_numpy1.16python3.6.____cpython</td>
+              <td>osx_64_numpy1.17python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.16python3.6.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.17python3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_numpy1.16python3.7.____cpython</td>
+              <td>osx_64_numpy1.17python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.16python3.7.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.17python3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_numpy1.16python3.8.____cpython</td>
+              <td>osx_64_numpy1.17python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.16python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.17python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -96,6 +100,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-graph--tool-green.svg)](https://anaconda.org/conda-forge/graph-tool) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/graph-tool.svg)](https://anaconda.org/conda-forge/graph-tool) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/graph-tool.svg)](https://anaconda.org/conda-forge/graph-tool) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/graph-tool.svg)](https://anaconda.org/conda-forge/graph-tool) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-graph--tool--base-green.svg)](https://anaconda.org/conda-forge/graph-tool-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/graph-tool-base.svg)](https://anaconda.org/conda-forge/graph-tool-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/graph-tool-base.svg)](https://anaconda.org/conda-forge/graph-tool-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/graph-tool-base.svg)](https://anaconda.org/conda-forge/graph-tool-base) |
 
 Installing graph-tool
 =====================
@@ -104,12 +109,13 @@ Installing `graph-tool` from the `conda-forge` channel can be achieved by adding
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `graph-tool` can be installed with:
+Once the `conda-forge` channel has been enabled, `graph-tool, graph-tool-base` can be installed with:
 
 ```
-conda install graph-tool
+conda install graph-tool graph-tool-base
 ```
 
 It is possible to list all of the versions of `graph-tool` available on your platform with:
@@ -174,9 +180,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers

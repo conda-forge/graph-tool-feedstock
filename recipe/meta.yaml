@@ -20,7 +20,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
@@ -33,56 +33,81 @@ build:
   # (Maybe this setting won't be needed in a later version of conda-build.)
   rpaths_patcher: patchelf  # [linux]
 
-requirements:
-  build:
-    - libtool
-    - autoconf
-    - automake
-    - pkg-config
-    - {{ compiler("cxx") }}
-    - llvm-openmp           # [osx]
-  host:
-    - python
-    - numpy
-    - boost-cpp
-    - boost
-    - expat
-    - scipy >=1.0
-    - gmp
-    - cgal-cpp 5.0*
-    - sparsehash 2.0*
-    - cairomm
-    - pycairo
-    - glib
-  run:
-    - python
-    - llvm-openmp  # [osx]
-    - boost-cpp
-    - boost
-    - expat
-    - scipy >=1.0
-    - {{ pin_compatible('numpy') }}
-    - gmp
-    - sparsehash >=2.0
-    - cairomm
-    - pycairo
-    - gdk-pixbuf
-    - librsvg
-    - gtk3
-    - pygobject
-    - matplotlib-base
-    - zstandard
+outputs:
+  - name: graph-tool-base
+    script: build_base.sh
+    requirements:
+      build:
+        - libtool
+        - autoconf
+        - automake
+        - pkg-config
+        - {{ compiler("cxx") }}
+        - llvm-openmp           # [osx]
+      host:
+        - python
+        - numpy
+        - boost-cpp
+        - boost
+        - expat
+        - scipy >=1.0
+        - gmp
+        - cgal-cpp 5.0*
+        - sparsehash 2.0*
+        - cairomm
+        - pycairo
+        - glib
+      run:
+        - python
+        - llvm-openmp  # [osx]
+        - boost-cpp
+        - boost
+        - expat
+        - scipy >=1.0
+        - {{ pin_compatible('numpy') }}
+        - gmp
+        - sparsehash >=2.0
+        - zstandard
+    test:
+      files:
+        - test_base_imports.py
+      commands:
+        - python test_base_imports.py
 
-test:
-  imports:
-    - graph_tool
-    - graph_tool.all
-    - graph_tool.draw
-    - graph_tool.draw.cairo_draw
+  - name: graph-tool
+    requirements:
+      host:
+        # Although there's no "build" for this subpackage per se,
+        # I think we might need to list these build-time dependencies here
+        # to ensure that the runtime dependencies are properly pinned.
+        - python
+        - cairomm
+        - pycairo
+        - glib
+      run:
+        - python
+        - {{ pin_subpackage('graph-tool-base', max_pin="x.x.x.x") }}
+        - cairomm
+        - pycairo
+        - gdk-pixbuf
+        - librsvg
+        - gtk3
+        - pygobject
+        - matplotlib-base
+    test:
+      files:
+        - test_all_imports.py
+      commands:
+        - python test_all_imports.py
 
 about:
   home: https://graph-tool.skewed.de/
-  summary: Efficient network analysis
+  summary: |
+    Graph-tool is an efficient Python module for manipulation and statistical analysis of graphs (a.k.a. networks).
+    The 'graph-tool' conda package installs graph-tool and all dependencies, including drawing dependencies.
+    For users who don't need drawing support, the 'graph-tool-base' conda package installs graph-tool and
+    only essential dependencies (but none for drawing).
+
   license: LGPL-3.0-or-later
   license_file:
     - licenses/LICENSE
