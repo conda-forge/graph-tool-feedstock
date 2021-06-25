@@ -68,9 +68,11 @@ outputs:
         - gmp
         - sparsehash >=2.0
         - zstandard
-
     test:
-      script: test_base_imports.py
+      files:
+        - test_base_imports.py
+      commands:
+        - python test_base_imports.py
 
   - name: graph-tool
     requirements:
@@ -93,7 +95,10 @@ outputs:
         - pygobject
         - matplotlib-base
     test:
-      script: test_all_imports.py
+      files:
+        - test_all_imports.py
+      commands:
+        - python test_all_imports.py
 
 about:
   home: https://graph-tool.skewed.de/
