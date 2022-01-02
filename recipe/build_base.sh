@@ -54,32 +54,8 @@ echo "Building with CPU_COUNT=${CPU_COUNT}"
     --disable-dependency-tracking \
     PYTHON_LIBS="${PYTHON_LIBS}"
 
-##
-## Building graph-tool requires a ton of RAM, which constrains the
-## number of parallel jobs we can afford to use during the build.
-## But if we were to use only a single thread, it would take 8 hours
-## or more to complete build, and the CI provider would time out.
-##
-## Below, we use a hybrid approach:
-##
-##   1. Build the most RAM-intensive part first
-##      (the inference package), in just a single thread on Linux,
-#       or two threads on Mac.
-##
-##   2. Then build everything else using parallel jobs (make -j<N>).
-##
-
-echo "[inference] Starting make"
-cd src/graph/inference
-if [[ $target_platform == osx* ]]; then
-    make -j2
-else
-    make -j1
-fi
-cd -
-
 echo "[all] Starting make"
-make -j${CPU_COUNT}
+make -j2
 
 # Test
 #LD_LIBRARY_PATH=${PREFIX}/lib make check
