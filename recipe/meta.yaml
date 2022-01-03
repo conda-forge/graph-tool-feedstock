@@ -38,6 +38,7 @@ outputs:
     script: build_base.sh
     requirements:
       build:
+        - make
         - libtool
         - autoconf
         - automake
