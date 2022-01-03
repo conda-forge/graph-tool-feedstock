@@ -87,7 +87,7 @@ outputs:
         - glib
       run:
         - python
-        - {{ pin_subpackage('graph-tool-base', max_pin="x.x.x.x") }}
+        - {{ pin_subpackage('graph-tool-base', exact=True) }}
         - cairomm
         - pycairo
         - gdk-pixbuf
