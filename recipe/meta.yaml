@@ -2,7 +2,7 @@
 {% set sha1 = "220e71bb4ae794d7f992b01b992f47fa396a4c4d" %}
 
 package:
-  name: graph-tool
+  name: graph-tool-suite
   version: {{ version }}
 
 source:
