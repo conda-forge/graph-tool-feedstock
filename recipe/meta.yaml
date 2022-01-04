@@ -20,7 +20,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 2
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
@@ -36,6 +36,11 @@ build:
 outputs:
   - name: graph-tool-base
     script: build_base.sh
+    build:
+      ignore_run_exports_from:
+        - pycairo
+        - cairomm
+        - glib
     requirements:
       build:
         - make
@@ -71,8 +76,10 @@ outputs:
         - zstandard
     test:
       files:
+        - test_base_deps.sh
         - test_base_imports.py
       commands:
+        - bash test_base_deps.sh
         - python test_base_imports.py
 
   - name: graph-tool
