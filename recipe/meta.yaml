@@ -61,7 +61,7 @@ outputs:
         - expat
         - scipy >=1.0
         - gmp
-        - cgal-cpp 5.0*
+        - cgal-cpp 5.3*
         - sparsehash 2.0*
         - cairomm
         - pycairo
