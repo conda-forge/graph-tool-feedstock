@@ -50,6 +50,7 @@ outputs:
         - libtool
         - autoconf
         - automake
+        - gnuconfig
         - pkg-config
         - {{ compiler("cxx") }}
         - llvm-openmp           # [osx]

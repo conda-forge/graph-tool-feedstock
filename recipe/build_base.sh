@@ -44,6 +44,9 @@ echo "Building with CPU_COUNT=${CPU_COUNT}"
 
 ./autogen.sh
 
+# Get an updated config.sub and config.guess
+cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
+
 ./configure \
     --prefix="${PREFIX}" \
     --with-boost="${BOOST_ROOT}" \
