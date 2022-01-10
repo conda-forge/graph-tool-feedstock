@@ -18,6 +18,10 @@ source:
     # Don't use autotools to detect and test boost-python.
     - patches/skip-boost-python-config.patch
 
+    # When cross-compiling, don't let configure run a CGAL test program.
+    # Just trust the location we pass via --with-cgal
+    - patches/skip-cgal-check.patch  # [build_platform != target_platform]
+
 build:
   skip: true  # [win]
   number: 3

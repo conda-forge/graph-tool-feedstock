@@ -55,7 +55,8 @@ cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
     --with-cgal="${PREFIX}" \
     --disable-debug \
     --disable-dependency-tracking \
-    PYTHON_LIBS="${PYTHON_LIBS}"
+    PYTHON_LIBS="${PYTHON_LIBS}" \
+|| { cat config.log ; exit 1 ; }
 
 echo "[all] Starting make"
 make -j2
