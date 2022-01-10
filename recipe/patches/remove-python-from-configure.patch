@@ -1,0 +1,31 @@
+diff --git configure.ac configure.ac
+index 148bbd41..fb489ff7 100644
+--- configure.ac
++++ configure.ac
+@@ -118,7 +118,7 @@ PKG_CHECK_MODULES([EXPAT], [expat])
+ dnl python
+ AM_PATH_PYTHON([3.6])
+ AC_SUBST(PYTHON_VERSION)
+-PYTHON_FULL_VERSION=[`${PYTHON} -c "import sys; print(sys.version.split()[0])"`]
++PYTHON_FULL_VERSION=[${PY_VER}]
+ AC_SUBST(PYTHON_FULL_VERSION)
+ AX_PYTHON_DEVEL([== '${PYTHON_FULL_VERSION}'])
+ 
+@@ -189,7 +189,7 @@ dnl Checks for header files.
+ 
+ dnl numpy
+ AX_PYTHON_MODULE(numpy, fatal)
+-[NUMPY_DIR=`$PYTHON -c "import numpy; print(numpy.get_include())"`]
++[NUMPY_DIR=${SP_DIR}/numpy/core/include]
+ AC_ARG_WITH([numpy], [AS_HELP_STRING([--with-numpy=DIR],[directory where numpy is installed
+                       [default=auto-detected] ])],
+             NUMPY_DIR=$withval)
+@@ -224,7 +224,7 @@ if test "$USING_CAIRO" = "yes"; then
+    AC_SUBST(CAIROMM_CFLAGS)
+    AC_SUBST(CAIROMM_LIBS)
+    AX_PYTHON_MODULE(cairo)
+-   PYCAIRO_INCLUDE=-I`${PYTHON} -c 'import cairo; print(cairo.get_include())'`
++   PYCAIRO_INCLUDE=-I${SP_DIR}/cairo/include
+    PYTHON_CPPFLAGS="${PYCAIRO_INCLUDE} ${PYTHON_CPPFLAGS}"
+    PYTHON_VERSION_MAJOR=$(echo $PYTHON_VERSION | cut -d'.' -f1)
+    [PYCAIRO_HEADER=py3cairo.h]

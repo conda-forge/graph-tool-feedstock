@@ -22,6 +22,9 @@ source:
     # Just trust the location we pass via --with-cgal
     - patches/skip-cgal-check.patch  # [build_platform != target_platform]
 
+    # When cross-compiling, don't execute python during configure
+    - patches/remove-python-from-configure.patch  # [build_platform != target_platform]
+
 build:
   skip: true  # [win]
   number: 3
