@@ -23,7 +23,7 @@ export BOOST_PYTHON_LIB=boost_python${CONDA_PY}
 # It does not link against libpython3.7.dylib and therefore no
 # python extension modules should link against libpython3.7, either!
 # In fact, if we link against libpython, we'll end up with segfaults.
-# Instead, all python symbols will be loaded by python executable itself.
+# Instead, all python symbols should be loaded by python executable itself.
 #
 # So, we don't want to set PYTHON_LIBS, but we can't leave it empty.
 # This is a suitable no-op.
@@ -47,6 +47,18 @@ echo "Building with CPU_COUNT=${CPU_COUNT}"
 # Get an updated config.sub and config.guess
 cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
 
+
+echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
+conda list -p ${PREFIX} numpy
+echo ${PREFIX}
+echo ${SP_DIR}
+ls ${SP_DIR}
+ls ${SP_DIR}/numpy
+ls ${SP_DIR}/numpy/core
+ls ${SP_DIR}/numpy/core/include
+echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
+
+
 ./configure \
     --prefix="${PREFIX}" \
     --with-boost="${BOOST_ROOT}" \
@@ -55,7 +67,12 @@ cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
     --with-cgal="${PREFIX}" \
     --disable-debug \
     --disable-dependency-tracking \
+    PYTHON=${PYTHON} \
+    PYTHON_VERSION=${PY_VER} \
     PYTHON_LIBS="${PYTHON_LIBS}" \
+    --with-python-prefix=${PREFIX} \
+    --with-python-module-path=${SP_DIR} \
+    --with-numpy=${SP_DIR}/numpy/core/include \
 || { cat config.log ; exit 1 ; }
 
 echo "[all] Starting make"

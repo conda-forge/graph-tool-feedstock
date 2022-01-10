@@ -1,16 +1,7 @@
 diff --git configure.ac configure.ac
-index 148bbd41..fb489ff7 100644
+index 148bbd41..4b962bf0 100644
 --- configure.ac
 +++ configure.ac
-@@ -118,7 +118,7 @@ PKG_CHECK_MODULES([EXPAT], [expat])
- dnl python
- AM_PATH_PYTHON([3.6])
- AC_SUBST(PYTHON_VERSION)
--PYTHON_FULL_VERSION=[`${PYTHON} -c "import sys; print(sys.version.split()[0])"`]
-+PYTHON_FULL_VERSION=[${PY_VER}]
- AC_SUBST(PYTHON_FULL_VERSION)
- AX_PYTHON_DEVEL([== '${PYTHON_FULL_VERSION}'])
- 
 @@ -189,7 +189,7 @@ dnl Checks for header files.
  
  dnl numpy
