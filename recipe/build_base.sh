@@ -76,7 +76,15 @@ echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
 || { cat config.log ; exit 1 ; }
 
 echo "[all] Starting make"
-make -j2
+
+if [[ $target_platform == osx* ]]; then
+    make -j2
+else
+    # Unfortunately, parallel linux builds can sometimes exhaust the container RAM.
+    # Fortunately, even a single-threaded build is fast enough to complete
+    # within the 6 hour time limit.
+    make
+fi
 
 # Test
 #LD_LIBRARY_PATH=${PREFIX}/lib make check
