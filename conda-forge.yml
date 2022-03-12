@@ -3,3 +3,6 @@ azure:
   store_build_artifacts: true
 bot:
   automerge: true
+github:
+  branch_name: main
+  tooling_branch_name: main
