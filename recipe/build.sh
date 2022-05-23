@@ -7,6 +7,13 @@ export CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
 export CXXFLAGS="${CXXFLAGS} -I${PREFIX}/include -std=c++17 -O3"
 export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
 
+if [[ $CONDA_TOOLCHAIN_BUILD != $CONDA_TOOLCHAIN_HOST ]]; then
+    # Conda does some swizzling when cross compiling, including moving
+    # the site-packages folder to the build prefix. So let's just
+    # manually add this to the compiler search path.
+    CXXFLAGS="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages $CXXFLAGS"
+fi
+
 export BOOST_ROOT="${PREFIX}"
 
 # Explicitly set this, which is used in configure.
