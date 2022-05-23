@@ -42,12 +42,6 @@ fi
 
 echo "Building with CPU_COUNT=${CPU_COUNT}"
 
-./autogen.sh
-
-# Get an updated config.sub and config.guess
-cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
-
-
 echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
 conda list -p ${PREFIX} numpy
 echo ${PREFIX}
@@ -58,6 +52,10 @@ ls ${SP_DIR}/numpy/core
 ls ${SP_DIR}/numpy/core/include
 echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
 
+./autogen.sh
+
+# Get an updated config.sub and config.guess
+cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
 
 ./configure \
     --prefix="${PREFIX}" \
