@@ -12,6 +12,7 @@ if [[ $CONDA_TOOLCHAIN_BUILD != $CONDA_TOOLCHAIN_HOST ]]; then
     # the site-packages folder to the build prefix. So let's just
     # manually add this to the compiler search path.
     CPPFLAGS="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages/numpy/core/include $CPPFLAGS"
+    CPPFLAGS="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages/cairo/include $CPPFLAGS"
 fi
 
 export BOOST_ROOT="${PREFIX}"
