@@ -2,7 +2,7 @@
 {% set sha1 = "220e71bb4ae794d7f992b01b992f47fa396a4c4d" %}
 
 package:
-  name: graph-tool-suite
+  name: graph-tool
   version: {{ version }}
 
 source:
@@ -40,92 +40,70 @@ build:
   # (Maybe this setting won't be needed in a later version of conda-build.)
   rpaths_patcher: patchelf  # [linux]
 
-outputs:
-  - name: graph-tool-base
-    script: build_base.sh
+  build:
+    ignore_run_exports_from:
+      - pycairo
+      - cairomm
+      - glib
+  requirements:
     build:
-      ignore_run_exports_from:
-        - pycairo
-        - cairomm
-        - glib
-    requirements:
-      build:
-        - python                                 # [build_platform != target_platform]
-        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-        - numpy                                  # [build_platform != target_platform]
-        - make
-        - libtool
-        - autoconf
-        - automake
-        - gnuconfig
-        - pkg-config
-        - {{ compiler("cxx") }}
-        - llvm-openmp           # [osx]
-      host:
-        - python
-        - numpy
-        - boost-cpp
-        - boost
-        - expat
-        - scipy >=1.0
-        - gmp
-        - cgal-cpp 5.3*
-        - sparsehash 2.0*
-        - cairomm
-        - pycairo
-        - glib
-      run:
-        - python
-        - llvm-openmp  # [osx]
-        - boost-cpp
-        - boost
-        - expat
-        - scipy >=1.0
-        - {{ pin_compatible('numpy') }}
-        - gmp
-        - sparsehash >=2.0
-        - zstandard
-    test:
-      files:
-        - test_base_deps.sh
-        - test_base_imports.py
-      commands:
-        - bash test_base_deps.sh
-        - python test_base_imports.py
+      - python                                 # [build_platform != target_platform]
+      - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+      - numpy                                  # [build_platform != target_platform]
+      - make
+      - libtool
+      - autoconf
+      - automake
+      - gnuconfig
+      - pkg-config
+      - {{ compiler("cxx") }}
+      - llvm-openmp           # [osx]
+    host:
+      - python
+      - numpy
+      - boost-cpp
+      - boost
+      - expat
+      - scipy >=1.0
+      - gmp
+      - cgal-cpp 5.3*
+      - sparsehash 2.0*
+      - cairomm
+      - pycairo
+      - glib
 
-  - name: graph-tool
-    requirements:
-      host:
-        # Although there's no "build" for this subpackage per se,
-        # I think we might need to list these build-time dependencies here
-        # to ensure that the runtime dependencies are properly pinned.
-        - python
-        - cairomm
-        - pycairo
-        - glib
-      run:
-        - python
-        - {{ pin_subpackage('graph-tool-base', exact=True) }}
-        - cairomm
-        - pycairo
-        - gdk-pixbuf
-        - librsvg
-        - gtk3
-        - pygobject
-        - matplotlib-base
-    test:
-      files:
-        - test_all_imports.py
-      commands:
-        - python test_all_imports.py
+    run:
+      - python
+      - llvm-openmp  # [osx]
+      - boost-cpp
+      - boost
+      - expat
+      - scipy >=1.0
+      - {{ pin_compatible('numpy') }}
+      - gmp
+      - sparsehash >=2.0
+      - zstandard
+
+      # plotting dependencies
+      - cairomm
+      - pycairo
+      - gdk-pixbuf
+      - librsvg
+      - gtk3
+      - pygobject
+      - matplotlib-base
+
+  test:
+    files:
+      - test_all_imports.py
+    commands:
+      - python test_all_imports.py
 
 about:
   home: https://graph-tool.skewed.de/
   summary: |
     Graph-tool is an efficient Python module for manipulation and statistical analysis of graphs (a.k.a. networks).
     The 'graph-tool' conda package installs graph-tool and all dependencies, including drawing dependencies.
-    For users who don't need drawing support, the 'graph-tool-base' conda package installs graph-tool and
-    only essential dependencies (but none for drawing).
 
   license: LGPL-3.0-or-later
   license_file:
