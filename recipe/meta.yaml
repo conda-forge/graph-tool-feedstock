@@ -36,68 +36,68 @@ build:
   # There might be other bugs related to LIEF, too:
   # - https://github.com/conda-forge/staged-recipes/pull/10979#issuecomment-595388237
   # - https://github.com/lief-project/LIEF/issues/239
-  # 
+  #
   # (Maybe this setting won't be needed in a later version of conda-build.)
   rpaths_patcher: patchelf  # [linux]
 
+  ignore_run_exports_from:
+    - pycairo
+    - cairomm
+    - glib
+
+requirements:
   build:
-    ignore_run_exports_from:
-      - pycairo
-      - cairomm
-      - glib
-  requirements:
-    build:
-      - python                                 # [build_platform != target_platform]
-      - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-      - numpy                                  # [build_platform != target_platform]
-      - make
-      - libtool
-      - autoconf
-      - automake
-      - gnuconfig
-      - pkg-config
-      - {{ compiler("cxx") }}
-      - llvm-openmp           # [osx]
-    host:
-      - python
-      - numpy
-      - boost-cpp
-      - boost
-      - expat
-      - scipy >=1.0
-      - gmp
-      - cgal-cpp 5.3*
-      - sparsehash 2.0*
-      - cairomm
-      - pycairo
-      - glib
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
+    - make
+    - libtool
+    - autoconf
+    - automake
+    - gnuconfig
+    - pkg-config
+    - {{ compiler("cxx") }}
+    - llvm-openmp           # [osx]
+  host:
+    - python
+    - numpy
+    - boost-cpp
+    - boost
+    - expat
+    - scipy >=1.0
+    - gmp
+    - cgal-cpp 5.3*
+    - sparsehash 2.0*
+    - cairomm
+    - pycairo
+    - glib
 
-    run:
-      - python
-      - llvm-openmp  # [osx]
-      - boost-cpp
-      - boost
-      - expat
-      - scipy >=1.0
-      - {{ pin_compatible('numpy') }}
-      - gmp
-      - sparsehash >=2.0
-      - zstandard
+  run:
+    - python
+    - llvm-openmp  # [osx]
+    - boost-cpp
+    - boost
+    - expat
+    - scipy >=1.0
+    - {{ pin_compatible('numpy') }}
+    - gmp
+    - sparsehash >=2.0
+    - zstandard
 
-      # plotting dependencies
-      - cairomm
-      - pycairo
-      - gdk-pixbuf
-      - librsvg
-      - gtk3
-      - pygobject
-      - matplotlib-base
+    # plotting dependencies
+    - cairomm
+    - pycairo
+    - gdk-pixbuf
+    - librsvg
+    - gtk3
+    - pygobject
+    - matplotlib-base
 
-  test:
-    files:
-      - test_all_imports.py
-    commands:
-      - python test_all_imports.py
+test:
+  files:
+    - test_all_imports.py
+  commands:
+    - python test_all_imports.py
 
 about:
   home: https://graph-tool.skewed.de/
