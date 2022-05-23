@@ -20,6 +20,8 @@ glib:
 - '2'
 gmp:
 - '6'
+librsvg:
+- '2'
 llvm_openmp:
 - '13'
 macos_machine:
@@ -32,6 +34,8 @@ pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
   gmp:
+    max_pin: x
+  librsvg:
     max_pin: x
   python:
     min_pin: x.x
