@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '11'
+- '13'
 expat:
 - '2'
 gdk_pixbuf:
@@ -20,22 +20,18 @@ glib:
 - '2'
 gmp:
 - '6'
-librsvg:
-- '2'
 llvm_openmp:
-- '11'
+- '13'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
-- '1.18'
+- '1.19'
 pin_run_as_build:
   boost:
     max_pin: x.x.x
   boost-cpp:
     max_pin: x.x.x
   gmp:
-    max_pin: x
-  librsvg:
     max_pin: x
   python:
     min_pin: x.x
