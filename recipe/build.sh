@@ -78,7 +78,7 @@ cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
     PYTHON_VERSION=${PY_VER} \
     PYTHON_LIBS="${PYTHON_LIBS}" \
     --with-python-prefix=${PREFIX} \
-    --with-python-module-path=${SP_DIR}
+    --with-python-module-path=${SP_DIR} \
 || { cat config.log ; exit 1 ; }
 
 echo "[all] Starting make"
