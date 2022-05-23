@@ -11,7 +11,7 @@ if [[ $CONDA_TOOLCHAIN_BUILD != $CONDA_TOOLCHAIN_HOST ]]; then
     # Conda does some swizzling when cross compiling, including moving
     # the site-packages folder to the build prefix. So let's just
     # manually add this to the compiler search path.
-    CXXFLAGS="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages $CXXFLAGS"
+    CPPFLAGS="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages $CPPFLAGS"
 fi
 
 export BOOST_ROOT="${PREFIX}"
@@ -53,6 +53,8 @@ echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
 conda list -p ${PREFIX} numpy
 echo ${PREFIX}
 echo ${SP_DIR}
+python -c "import numpy; print(numpy.get_include())"
+
 #ls ${SP_DIR}
 #ls ${SP_DIR}/numpy
 #ls ${SP_DIR}/numpy/core
@@ -76,8 +78,7 @@ cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
     PYTHON_VERSION=${PY_VER} \
     PYTHON_LIBS="${PYTHON_LIBS}" \
     --with-python-prefix=${PREFIX} \
-    --with-python-module-path=${SP_DIR} \
-    --with-numpy=${SP_DIR}/numpy/core/include \
+    --with-python-module-path=${SP_DIR}
 || { cat config.log ; exit 1 ; }
 
 echo "[all] Starting make"
