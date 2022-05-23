@@ -7,6 +7,14 @@ export CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
 export CXXFLAGS="${CXXFLAGS} -I${PREFIX}/include -std=c++17 -O3"
 export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
 
+if [[ $CONDA_TOOLCHAIN_BUILD != $CONDA_TOOLCHAIN_HOST ]]; then
+    # Conda does some swizzling when cross compiling, including moving
+    # the site-packages folder to the build prefix. So let's just
+    # manually add this to the compiler search path.
+    CPPFLAGS="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages/numpy/core/include $CPPFLAGS"
+    CPPFLAGS="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages/cairo/include $CPPFLAGS"
+fi
+
 export BOOST_ROOT="${PREFIX}"
 
 # Explicitly set this, which is used in configure.
@@ -46,18 +54,6 @@ echo "Building with CPU_COUNT=${CPU_COUNT}"
 
 # Get an updated config.sub and config.guess
 cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
-
-
-echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
-conda list -p ${PREFIX} numpy
-echo ${PREFIX}
-echo ${SP_DIR}
-ls ${SP_DIR}
-ls ${SP_DIR}/numpy
-ls ${SP_DIR}/numpy/core
-ls ${SP_DIR}/numpy/core/include
-echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
-
 
 ./configure \
     --prefix="${PREFIX}" \
