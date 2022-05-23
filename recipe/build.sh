@@ -53,10 +53,10 @@ echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
 conda list -p ${PREFIX} numpy
 echo ${PREFIX}
 echo ${SP_DIR}
-ls ${SP_DIR}
-ls ${SP_DIR}/numpy
-ls ${SP_DIR}/numpy/core
-ls ${SP_DIR}/numpy/core/include
+#ls ${SP_DIR}
+#ls ${SP_DIR}/numpy
+#ls ${SP_DIR}/numpy/core
+#ls ${SP_DIR}/numpy/core/include
 echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
 
 ./autogen.sh
