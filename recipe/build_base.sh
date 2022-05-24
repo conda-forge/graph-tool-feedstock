@@ -11,8 +11,11 @@ if [[ $CONDA_TOOLCHAIN_BUILD != $CONDA_TOOLCHAIN_HOST ]]; then
     # Conda does some swizzling when cross compiling, including moving
     # the site-packages folder to the build prefix. So let's just
     # manually add this to the compiler search path.
-    CPPFLAGS="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages/numpy/core/include $CPPFLAGS"
-    CPPFLAGS="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages/cairo/include $CPPFLAGS"
+    CPPFLAGS="-isystem ${BUILD_PREFIX}/lib/python$PY_VER/site-packages/numpy/core/include ${CPPFLAGS}"
+    CPPFLAGS="-isystem ${BUILD_PREFIX}/lib/python$PY_VER/site-packages/cairo/include ${CPPFLAGS}"
+    CPPFLAGS="-isystem ${BUILD_PREFIX}/include"
+    LDFLAGS="${LDFLAGS} -L${BUILD_PREFIX}/lib"
+    SP_DIR="$BUILD_PREFIX/lib/python$PY_VER/site-packages"
 fi
 
 export BOOST_ROOT="${PREFIX}"
