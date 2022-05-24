@@ -67,7 +67,9 @@ index f3f3192e..3986e67f 100644
 +if test $withval ; then
 +    AC_MSG_NOTICE([Using CGAL from args: --with-cgal=$withval])
 +    CGAL_CPPFLAGS="-I$withval/include"
-+    CGAL_LDFLAGS="-L$withval/lib -lCGAL -lCGAL_Core -lgmp ${BOOST_THREAD_LIB}"
++
++    dnl CGA 5.3+ is header-only, and that's what we use on conda-forge
++    CGAL_LDFLAGS=""
 +    ac_cgal=yes
 +else
 +    AC_MSG_ERROR("Please provide CGAL location via --with-cgal=<PREFIX>", 1)
