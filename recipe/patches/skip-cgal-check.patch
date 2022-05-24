@@ -1,8 +1,8 @@
 diff --git m4/ax_lib_cgal_core.m4 m4/ax_lib_cgal_core.m4
-index f3f3192e..3986e67f 100644
+index f3f3192e..a7291016 100644
 --- m4/ax_lib_cgal_core.m4
 +++ m4/ax_lib_cgal_core.m4
-@@ -52,64 +52,14 @@ AC_LANG_PUSH([C++])
+@@ -52,64 +52,16 @@ AC_LANG_PUSH([C++])
  AC_CHECK_LIB(gmp, __gmpz_init, ,
    [AC_MSG_ERROR([GNU MP not found (a CGAL dependency), see https://gmplib.org/])])
  
@@ -11,7 +11,10 @@ index f3f3192e..3986e67f 100644
 -        CGAL_CPPFLAGS="-I$ac_cgal_iterate/include"
 -        CPPFLAGS="$CPPFLAGS $CGAL_CPPFLAGS $BOOST_CPPFLAGS"
 -        export CPPFLAGS
--
++if test $withval ; then
++    AC_MSG_NOTICE([Using CGAL from args: --with-cgal=$withval])
++    CGAL_CPPFLAGS="-I$withval/include"
+ 
 -        for include_only in yes no; do
 -            if test $include_only = yes ; then
 -                CGAL_LDFLAGS=""
@@ -64,10 +67,6 @@ index f3f3192e..3986e67f 100644
 -                AC_MSG_RESULT([no])
 -        fi
 -done
-+if test $withval ; then
-+    AC_MSG_NOTICE([Using CGAL from args: --with-cgal=$withval])
-+    CGAL_CPPFLAGS="-I$withval/include"
-+
 +    dnl CGA 5.3+ is header-only, and that's what we use on conda-forge
 +    CGAL_LDFLAGS=""
 +    ac_cgal=yes
