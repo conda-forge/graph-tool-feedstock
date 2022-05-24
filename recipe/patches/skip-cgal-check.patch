@@ -75,7 +75,7 @@ index f3f3192e..3986e67f 100644
 +    LDFLAGS_SAVED="$LDFLAGS"
 +    LDFLAGS="$LDFLAGS $BOOST_LDFLAGS $CGAL_LDFLAGS"
 +    export LDFLAGS
-+
++    
 +    AC_MSG_CHECKING([whether CGAL is available in $ac_cgal_iterate])
 +    dnl This test program is taken from:
 +    dnl http://www.cgal.org/Manual/latest/examples/Convex_hull_2/vector_convex_hull_2.cpp
@@ -100,7 +100,7 @@ index f3f3192e..3986e67f 100644
 +            //std::cout << result.size() << " points on the convex hull" << std::endl;]
 +            ])]
 +            ,[ac_cgal=yes],[ac_cgal=no])
-+
++    
 +    LDFLAGS="$LDFLAGS_SAVED"
 +    export LDFLAGS
 +    CPPFLAGS="$CPPFLAGS_SAVED"
