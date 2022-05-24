@@ -16,6 +16,8 @@ if [[ $CONDA_TOOLCHAIN_BUILD != $CONDA_TOOLCHAIN_HOST ]]; then
     CPPFLAGS="-isystem ${BUILD_PREFIX}/include"
     LDFLAGS="${LDFLAGS} -L${BUILD_PREFIX}/lib"
     SP_DIR="$BUILD_PREFIX/lib/python$PY_VER/site-packages"
+else
+    SP_DIR="$PREFIX/lib/python$PY_VER/site-packages"
 fi
 
 export BOOST_ROOT="${PREFIX}"
