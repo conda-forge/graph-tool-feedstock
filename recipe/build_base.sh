@@ -7,19 +7,6 @@ export CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
 export CXXFLAGS="${CXXFLAGS} -I${PREFIX}/include -std=c++17 -O3"
 export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
 
-if [[ $CONDA_TOOLCHAIN_BUILD != $CONDA_TOOLCHAIN_HOST ]]; then
-    # Conda does some swizzling when cross compiling, including moving
-    # the site-packages folder to the build prefix. So let's just
-    # manually add this to the compiler search path.
-    CPPFLAGS="-isystem ${BUILD_PREFIX}/lib/python${PY_VER}/site-packages/numpy/core/include ${CPPFLAGS}"
-    CPPFLAGS="-isystem ${BUILD_PREFIX}/lib/python${PY_VER}/site-packages/cairo/include ${CPPFLAGS}"
-    CPPFLAGS="-isystem ${BUILD_PREFIX}/include"
-    LDFLAGS="${LDFLAGS} -L${BUILD_PREFIX}/lib"
-    SP_DIR="${BUILD_PREFIX}/lib/python${PY_VER}/site-packages"
-else
-    SP_DIR="${PREFIX}/lib/python${PY_VER}/site-packages"
-fi
-
 export BOOST_ROOT="${PREFIX}"
 
 # Explicitly set this, which is used in configure.
@@ -72,8 +59,6 @@ cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
     PYTHON_VERSION=${PY_VER} \
     PYTHON_LIBS="${PYTHON_LIBS}" \
     --with-python-prefix=${PREFIX} \
-    --with-python-module-path="${PREFIX}/lib/python${PY_VER}/site-packages" \
-    --with-numpy=${SP_DIR}/numpy/core/include \
 || { cat config.log ; exit 1 ; }
 
 echo "[all] Starting make"
