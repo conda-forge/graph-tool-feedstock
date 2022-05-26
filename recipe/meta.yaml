@@ -18,9 +18,13 @@ source:
     # Don't use autotools to detect and test boost-python.
     - patches/skip-boost-python-config.patch
 
+    # When cross-compiling, don't let configure run a CGAL test program.
+    # Just trust the location we pass via --with-cgal
+    - patches/skip-cgal-check.patch  # [build_platform != target_platform]
+
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
@@ -43,10 +47,15 @@ outputs:
         - glib
     requirements:
       build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+        - numpy                                  # [build_platform != target_platform]
+        - pycairo                                # [build_platform != target_platform]
         - make
         - libtool
         - autoconf
         - automake
+        - gnuconfig
         - pkg-config
         - {{ compiler("cxx") }}
         - llvm-openmp           # [osx]
@@ -58,7 +67,7 @@ outputs:
         - expat
         - scipy >=1.0
         - gmp
-        - cgal-cpp 5.0*
+        - cgal-cpp 5.3*
         - sparsehash 2.0*
         - cairomm
         - pycairo

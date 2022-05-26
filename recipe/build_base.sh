@@ -23,7 +23,7 @@ export BOOST_PYTHON_LIB=boost_python${CONDA_PY}
 # It does not link against libpython3.7.dylib and therefore no
 # python extension modules should link against libpython3.7, either!
 # In fact, if we link against libpython, we'll end up with segfaults.
-# Instead, all python symbols will be loaded by python executable itself.
+# Instead, all python symbols should be loaded by python executable itself.
 #
 # So, we don't want to set PYTHON_LIBS, but we can't leave it empty.
 # This is a suitable no-op.
@@ -44,6 +44,9 @@ echo "Building with CPU_COUNT=${CPU_COUNT}"
 
 ./autogen.sh
 
+# Get an updated config.sub and config.guess
+cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
+
 ./configure \
     --prefix="${PREFIX}" \
     --with-boost="${BOOST_ROOT}" \
@@ -52,10 +55,22 @@ echo "Building with CPU_COUNT=${CPU_COUNT}"
     --with-cgal="${PREFIX}" \
     --disable-debug \
     --disable-dependency-tracking \
-    PYTHON_LIBS="${PYTHON_LIBS}"
+    PYTHON=${PYTHON} \
+    PYTHON_VERSION=${PY_VER} \
+    PYTHON_LIBS="${PYTHON_LIBS}" \
+    --with-python-prefix=${PREFIX} \
+|| { cat config.log ; exit 1 ; }
 
 echo "[all] Starting make"
-make -j2
+
+if [[ $target_platform == osx* ]]; then
+    make -j2
+else
+    # Unfortunately, parallel linux builds can sometimes exhaust the container RAM.
+    # Fortunately, even a single-threaded build is fast enough to complete
+    # within the 6 hour time limit.
+    make
+fi
 
 # Test
 #LD_LIBRARY_PATH=${PREFIX}/lib make check
