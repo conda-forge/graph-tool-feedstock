@@ -41,9 +41,11 @@ outputs:
   - name: graph-tool-base
     script: build_base.sh
     build:
+      # In the 'graph-tool-base' package ignore run_exports for drawing dependencies,
+      # but respect them in the 'graph-tool' package (see below).
       ignore_run_exports_from:
         - pycairo
-        - cairomm
+        - cairomm-1.0
         - glib
     requirements:
       build:
@@ -69,7 +71,9 @@ outputs:
         - gmp
         - cgal-cpp 5.5*
         - sparsehash 2.0*
-        - cairomm
+        # Note: configure.ac expects cairomm-1.0, not cairomm-1.16 (a different ABI).
+        # See also: https://github.com/conda-forge/cairomm-feedstock/pull/26#issuecomment-1300807378
+        - cairomm-1.0
         - pycairo
         - glib
       run:
@@ -98,13 +102,13 @@ outputs:
         # I think we might need to list these build-time dependencies here
         # to ensure that the runtime dependencies are properly pinned.
         - python
-        - cairomm
+        - cairomm-1.0
         - pycairo
         - glib
       run:
         - python
         - {{ pin_subpackage('graph-tool-base', exact=True) }}
-        - cairomm
+        - cairomm-1.0
         - pycairo
         - gdk-pixbuf
         - librsvg
