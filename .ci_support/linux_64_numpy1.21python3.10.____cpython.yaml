@@ -1,7 +1,7 @@
 boost:
-- 1.74.0
+- 1.78.0
 boost_cpp:
-- 1.74.0
+- 1.78.0
 cdt_name:
 - cos6
 channel_sources:
@@ -29,8 +29,6 @@ pin_run_as_build:
     max_pin: x.x.x
   boost-cpp:
     max_pin: x.x.x
-  gmp:
-    max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
