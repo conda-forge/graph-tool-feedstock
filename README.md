@@ -1,11 +1,11 @@
-About graph-tool-suite
-======================
+About graph-tool-suite-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/graph-tool-feedstock/blob/main/LICENSE.txt)
 
 Home: https://graph-tool.skewed.de/
 
 Package license: LGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/graph-tool-feedstock/blob/main/LICENSE.txt)
 
 Summary: Graph-tool is an efficient Python module for manipulation and statistical analysis of graphs (a.k.a. networks).
 The 'graph-tool' conda package installs graph-tool and all dependencies, including drawing dependencies.
