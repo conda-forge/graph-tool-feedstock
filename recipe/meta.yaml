@@ -106,7 +106,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage('graph-tool-base', exact=True) }}
-        - cairomm-1.0
+        - cairomm-1.16
         - pycairo
         - gdk-pixbuf
         - librsvg
