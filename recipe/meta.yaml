@@ -24,7 +24,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
@@ -45,7 +45,7 @@ outputs:
       # but respect them in the 'graph-tool' package (see below).
       ignore_run_exports_from:
         - pycairo
-        - cairomm-1.0
+        - cairomm-1.16
         - glib
     requirements:
       build:
@@ -71,9 +71,7 @@ outputs:
         - gmp
         - cgal-cpp 5.5*
         - sparsehash 2.0*
-        # Note: configure.ac expects cairomm-1.0, not cairomm-1.16 (a different ABI).
-        # See also: https://github.com/conda-forge/cairomm-feedstock/pull/26#issuecomment-1300807378
-        - cairomm-1.0
+        - cairomm-1.16
         - pycairo
         - glib
       run:
@@ -102,7 +100,7 @@ outputs:
         # I think we might need to list these build-time dependencies here
         # to ensure that the runtime dependencies are properly pinned.
         - python
-        - cairomm-1.0
+        - cairomm-1.16
         - pycairo
         - glib
       run:
