@@ -64,12 +64,9 @@ cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
 echo "[all] Starting make"
 
 if [[ $target_platform == osx* ]]; then
-    make -j2
+    make -j3
 else
-    # Unfortunately, parallel linux builds can sometimes exhaust the container RAM.
-    # Fortunately, even a single-threaded build is fast enough to complete
-    # within the 6 hour time limit.
-    make
+    make -j2
 fi
 
 # Test
