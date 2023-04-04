@@ -33,14 +33,7 @@ if [[ $target_platform == osx* ]]; then
     # Don't resolve python symbols until runtime.
     # See note above about PYTHON_LIBS.
     export LDFLAGS="${LDFLAGS} -undefined dynamic_lookup"
-
-    if [[ "$CI" == "azure" ]]; then
-        # https://github.com/conda-forge/conda-forge-ci-setup-feedstock/issues/53#issuecomment-490314561
-        export CPU_COUNT=4
-    fi
 fi
-
-echo "Building with CPU_COUNT=${CPU_COUNT}"
 
 ./autogen.sh
 
@@ -63,8 +56,10 @@ cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
 
 echo "[all] Starting make"
 
-if [[ $target_platform == osx* ]]; then
+if [[ ${target_platform} == osx* ]]; then
     make -j3
+elif [[ ${target_platform} == "linux-aarch64" ]]; then
+    make
 else
     make -j2
 fi
