@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '14'
+- '15'
 expat:
 - '2'
 gdk_pixbuf:
@@ -21,7 +21,7 @@ glib:
 gmp:
 - '6'
 llvm_openmp:
-- '14'
+- '15'
 macos_machine:
 - arm64-apple-darwin20.0.0
 numpy:
