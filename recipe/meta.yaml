@@ -24,7 +24,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
@@ -68,8 +68,8 @@ outputs:
       host:
         - python
         - numpy
-        - boost-cpp
-        - boost
+        - libboost-devel
+        - libboost-python-devel
         - expat
         - scipy >=1.0
         - gmp
@@ -85,8 +85,6 @@ outputs:
       run:
         - python
         - llvm-openmp  # [osx]
-        - boost-cpp
-        - boost
         - expat
         - scipy >=1.0
         - {{ pin_compatible('numpy') }}
