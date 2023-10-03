@@ -1,9 +1,5 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
-boost:
-- 1.78.0
-boost_cpp:
-- 1.78.0
 channel_sources:
 - conda-forge
 channel_targets:
@@ -20,6 +16,10 @@ glib:
 - '2'
 gmp:
 - '6'
+libboost_devel:
+- '1.82'
+libboost_python_devel:
+- '1.82'
 llvm_openmp:
 - '15'
 macos_machine:
@@ -27,10 +27,6 @@ macos_machine:
 numpy:
 - '1.23'
 pin_run_as_build:
-  boost:
-    max_pin: x.x.x
-  boost-cpp:
-    max_pin: x.x.x
   python:
     min_pin: x.x
     max_pin: x.x

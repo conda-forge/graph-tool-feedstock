@@ -1,7 +1,3 @@
-boost:
-- 1.78.0
-boost_cpp:
-- 1.78.0
 cdt_name:
 - cos6
 channel_sources:
@@ -22,13 +18,13 @@ glib:
 - '2'
 gmp:
 - '6'
+libboost_devel:
+- '1.82'
+libboost_python_devel:
+- '1.82'
 numpy:
 - '1.22'
 pin_run_as_build:
-  boost:
-    max_pin: x.x.x
-  boost-cpp:
-    max_pin: x.x.x
   python:
     min_pin: x.x
     max_pin: x.x
