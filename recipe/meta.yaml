@@ -61,10 +61,6 @@ outputs:
         - pkg-config
         - {{ compiler("cxx") }}
         - llvm-openmp           # [osx]
-
-        # Necessary to constrain libcxx until conda-forge migrates to boost-1.81.
-        # https://github.com/conda-forge/graph-tool-feedstock/pull/97#issuecomment-1490453499
-        - libcxx<16  # [osx]
       host:
         - python
         - numpy
@@ -73,15 +69,11 @@ outputs:
         - expat
         - scipy >=1.0
         - gmp
-        - cgal-cpp 5.5*
+        - cgal-cpp 5.6*
         - sparsehash 2.0*
         - cairomm-1.16
         - pycairo
         - glib
-
-        # Necessary to constrain libcxx until conda-forge migrates to boost-1.81.
-        # https://github.com/conda-forge/graph-tool-feedstock/pull/97#issuecomment-1490453499
-        - libcxx<16  # [osx]
       run:
         - python
         - llvm-openmp  # [osx]
