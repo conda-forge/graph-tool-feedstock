@@ -7,7 +7,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '15'
+- '16'
 expat:
 - '2'
 gdk_pixbuf:
@@ -21,7 +21,7 @@ libboost_devel:
 libboost_python_devel:
 - '1.82'
 llvm_openmp:
-- '15'
+- '16'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
