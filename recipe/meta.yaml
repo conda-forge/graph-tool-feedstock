@@ -63,6 +63,7 @@ outputs:
         - llvm-openmp           # [osx]
       host:
         - python
+        - setuptools
         - numpy
         - libboost-devel
         - libboost-python-devel
