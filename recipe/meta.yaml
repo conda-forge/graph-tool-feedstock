@@ -24,7 +24,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 2
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
@@ -63,6 +63,7 @@ outputs:
         - llvm-openmp           # [osx]
       host:
         - python
+        - setuptools
         - numpy
         - libboost-devel
         - libboost-python-devel
