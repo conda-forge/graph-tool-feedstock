@@ -24,7 +24,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
@@ -60,6 +60,7 @@ outputs:
         - gnuconfig
         - pkg-config
         - {{ compiler("cxx") }}
+        - {{ stdlib("c") }}
         - llvm-openmp           # [osx]
       host:
         - python
