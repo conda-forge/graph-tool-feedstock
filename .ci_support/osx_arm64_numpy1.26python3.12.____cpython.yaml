@@ -1,5 +1,9 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '11.0'
+c_stdlib:
+- macosx_deployment_target
+c_stdlib_version:
+- '11.0'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -17,9 +21,9 @@ glib:
 gmp:
 - '6'
 libboost_devel:
-- '1.82'
+- '1.84'
 libboost_python_devel:
-- '1.82'
+- '1.84'
 llvm_openmp:
 - '16'
 macos_machine:
@@ -35,5 +39,7 @@ python:
 target_platform:
 - osx-arm64
 zip_keys:
+- - c_stdlib_version
+  - MACOSX_DEPLOYMENT_TARGET
 - - python
   - numpy
