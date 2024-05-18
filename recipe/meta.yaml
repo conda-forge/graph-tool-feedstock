@@ -24,7 +24,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
@@ -81,7 +81,6 @@ outputs:
         - llvm-openmp  # [osx]
         - expat
         - scipy >=1.0
-        - {{ pin_compatible('numpy') }}
         - gmp
         - sparsehash >=2.0
         - zstandard
