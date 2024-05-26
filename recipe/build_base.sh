@@ -62,8 +62,6 @@ echo "[all] Starting make"
 
 if [[ ${target_platform} == osx* ]]; then
     make -j3
-elif [[ ${target_platform} == "linux-aarch64" ]]; then
-    make
 else
     make -j2
 fi
