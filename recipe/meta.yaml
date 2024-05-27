@@ -66,8 +66,8 @@ outputs:
         - python
         - setuptools
         - numpy
-        - libboost-devel
-        - libboost-python-devel
+        - libboost-devel 1.82.*
+        - libboost-python-devel 1.82.*
         - expat
         - scipy >=1.0
         - gmp
