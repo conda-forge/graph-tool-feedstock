@@ -123,9 +123,9 @@ outputs:
         - matplotlib-base
     test:
       files:
-        - test_all_imports.py
+        - test_all_imports.py         # [microarch_level < 4]
       commands:
-        - python test_all_imports.py
+        - python test_all_imports.py  # [microarch_level < 4]
 
 about:
   home: https://graph-tool.skewed.de/
