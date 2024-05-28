@@ -1,5 +1,6 @@
 {% set version = "2.68" %}
 {% set sha1 = "79fab467ffb902e98fe7dea689e0274e9f33b18b" %}
+{% set build = 2 %}
 
 package:
   name: graph-tool-suite
@@ -24,7 +25,10 @@ source:
 
 build:
   skip: true  # [win]
-  number: 1
+  number: {{ build }}          # [not (unix and x86_64)]
+  number: {{ build + 100 }}    # [unix and x86_64 and microarch_level == 1]
+  number: {{ build + 300 }}    # [unix and x86_64 and microarch_level == 3]
+  number: {{ build + 400 }}    # [unix and x86_64 and microarch_level == 4]
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
@@ -62,6 +66,7 @@ outputs:
         - {{ compiler("cxx") }}
         - {{ stdlib("c") }}
         - llvm-openmp           # [osx]
+        - x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64]
       host:
         - python
         - setuptools
