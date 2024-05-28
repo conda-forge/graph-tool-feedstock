@@ -21,7 +21,8 @@ source:
 
     # When cross-compiling, don't let configure run a CGAL test program.
     # Just trust the location we pass via --with-cgal
-    - patches/skip-cgal-check.patch  # [build_platform != target_platform or microarch_level == 4]
+    #- patches/skip-cgal-check.patch  # [build_platform != target_platform]
+    - patches/skip-cgal-check.patch
 
 build:
   skip: true  # [win]
