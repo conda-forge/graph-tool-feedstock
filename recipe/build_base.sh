@@ -46,6 +46,7 @@ fi
 CPPFLAGS=$(echo "${CPPFLAGS}" | sed "s/-O2/-O3/g")
 CFLAGS=$(echo "${CFLAGS}" | sed "s/-O2/-O3/g")
 CXXFLAGS=$(echo "${CXXFLAGS}" | sed "s/-O2/-O3/g")
+LDFLAGS=$(echo "${LDFLAGS}" | sed "s/-O2/-O3/g")
 
 ./autogen.sh
 
