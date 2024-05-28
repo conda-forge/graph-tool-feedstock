@@ -30,6 +30,8 @@ libboost_devel:
 - '1.84'
 libboost_python_devel:
 - '1.84'
+microarch_level:
+- '1'
 numpy:
 - '1.22'
 pin_run_as_build:
