@@ -39,7 +39,7 @@ if [[ $target_platform == osx* ]]; then
     export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 fi
 
-if [[ "${microarch_level}" != "" ]]; then
+if [[ "${microarch_level}" != "" ]] && [[ "${microarch_level}" -gt "1" ]]; then
     CXXFLAGS="${CXXFLAGS} -march=x86-64-v${microarch_level}"
 fi
 
