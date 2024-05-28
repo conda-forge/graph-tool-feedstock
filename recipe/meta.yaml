@@ -95,11 +95,11 @@ outputs:
 
     test:
       files:
-        - test_base_deps.sh
-        - test_base_imports.py
+        - test_base_deps.sh            # [microarch_level < 4]
+        - test_base_imports.py         # [microarch_level < 4]
       commands:
-        - bash test_base_deps.sh
-        - python test_base_imports.py
+        - bash test_base_deps.sh       # [microarch_level < 4]
+        - python test_base_imports.py  # [microarch_level < 4]
 
   - name: graph-tool
     requirements:
