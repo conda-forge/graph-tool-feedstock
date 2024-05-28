@@ -66,7 +66,7 @@ outputs:
         - {{ compiler("cxx") }}
         - {{ stdlib("c") }}
         - llvm-openmp           # [osx]
-        - x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64]
+        - x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64 and microarch_level < 4]
       host:
         - python
         - setuptools
@@ -90,6 +90,7 @@ outputs:
         - gmp
         - sparsehash >=2.0
         - zstandard
+        - _x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64 and microarch_level == 4]
 
     test:
       files:

@@ -39,6 +39,10 @@ if [[ $target_platform == osx* ]]; then
     export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 fi
 
+if [[ "${microarch_level}" == "4" ]]; then
+    CXXFLAGS="${CXXFLAGS} -march=x86-64-v4"
+fi
+
 ./autogen.sh
 
 # Get an updated config.sub and config.guess
