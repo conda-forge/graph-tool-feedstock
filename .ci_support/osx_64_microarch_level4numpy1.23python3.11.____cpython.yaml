@@ -22,10 +22,16 @@ glib:
 - '2'
 gmp:
 - '6'
+libboost_devel:
+- '1.84'
+libboost_python_devel:
+- '1.84'
 llvm_openmp:
 - '16'
 macos_machine:
 - x86_64-apple-darwin13.4.0
+microarch_level:
+- '4'
 numpy:
 - '1.23'
 pin_run_as_build:
