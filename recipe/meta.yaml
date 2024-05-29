@@ -1,6 +1,6 @@
 {% set version = "2.68" %}
 {% set sha1 = "79fab467ffb902e98fe7dea689e0274e9f33b18b" %}
-{% set build = 2 %}
+{% set build = 3 %}
 
 package:
   name: graph-tool-suite
@@ -87,7 +87,6 @@ outputs:
         - llvm-openmp  # [osx]
         - expat
         - scipy >=1.0
-        - {{ pin_compatible('numpy') }}
         - gmp
         - sparsehash >=2.0
         - zstandard
