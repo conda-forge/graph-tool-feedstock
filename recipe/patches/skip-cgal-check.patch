@@ -10,7 +10,7 @@ index f3f3192e..c8779c76 100644
 +
 +                    dnl Third option here is the cross-compiling case
 +                    dnl https://www.gnu.org/software/autoconf/manual/autoconf-2.63/html_node/Runtime.html
-+                    ,[ac_cgal=yes],[ac_cgal=no],[ac_cgal=yes])
++                    ,[ac_cgal=yes],[ac_cgal=yes],[ac_cgal=yes])
  
             LDFLAGS="$LDFLAGS_SAVED"
             export LDFLAGS

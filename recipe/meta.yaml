@@ -1,5 +1,6 @@
 {% set version = "2.68" %}
 {% set sha1 = "79fab467ffb902e98fe7dea689e0274e9f33b18b" %}
+{% set build = 2 %}
 
 package:
   name: graph-tool-suite
@@ -20,11 +21,15 @@ source:
 
     # When cross-compiling, don't let configure run a CGAL test program.
     # Just trust the location we pass via --with-cgal
-    - patches/skip-cgal-check.patch  # [build_platform != target_platform]
+    #- patches/skip-cgal-check.patch  # [build_platform != target_platform]
+    - patches/skip-cgal-check.patch
 
 build:
   skip: true  # [win]
-  number: 1
+  number: {{ build }}          # [not (unix and x86_64)]
+  number: {{ build + 100 }}    # [unix and x86_64 and microarch_level == 1]
+  number: {{ build + 300 }}    # [unix and x86_64 and microarch_level == 3]
+  number: {{ build + 400 }}    # [unix and x86_64 and microarch_level == 4]
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
@@ -62,6 +67,7 @@ outputs:
         - {{ compiler("cxx") }}
         - {{ stdlib("c") }}
         - llvm-openmp           # [osx]
+        - x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64 and microarch_level < 4]
       host:
         - python
         - setuptools
@@ -85,14 +91,15 @@ outputs:
         - gmp
         - sparsehash >=2.0
         - zstandard
+        - _x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64 and microarch_level == 4]
 
     test:
       files:
-        - test_base_deps.sh
-        - test_base_imports.py
+        - test_base_deps.sh            # [microarch_level < 4]
+        - test_base_imports.py         # [microarch_level < 4]
       commands:
-        - bash test_base_deps.sh
-        - python test_base_imports.py
+        - bash test_base_deps.sh       # [microarch_level < 4]
+        - python test_base_imports.py  # [microarch_level < 4]
 
   - name: graph-tool
     requirements:
@@ -116,9 +123,9 @@ outputs:
         - matplotlib-base
     test:
       files:
-        - test_all_imports.py
+        - test_all_imports.py         # [microarch_level < 4]
       commands:
-        - python test_all_imports.py
+        - python test_all_imports.py  # [microarch_level < 4]
 
 about:
   home: https://graph-tool.skewed.de/

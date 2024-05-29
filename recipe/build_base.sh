@@ -39,6 +39,15 @@ if [[ $target_platform == osx* ]]; then
     export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 fi
 
+if [[ "${microarch_level}" == "4" ]]; then
+    CXXFLAGS="${CXXFLAGS} -march=x86-64-v4"
+fi
+
+CPPFLAGS=$(echo "${CPPFLAGS}" | sed "s/-O2/-O3/g")
+CFLAGS=$(echo "${CFLAGS}" | sed "s/-O2/-O3/g")
+CXXFLAGS=$(echo "${CXXFLAGS}" | sed "s/-O2/-O3/g")
+LDFLAGS=$(echo "${LDFLAGS}" | sed "s/-O2/-O3/g")
+
 ./autogen.sh
 
 # Get an updated config.sub and config.guess

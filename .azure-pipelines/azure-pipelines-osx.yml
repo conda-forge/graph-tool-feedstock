@@ -8,26 +8,66 @@ jobs:
     vmImage: macOS-12
   strategy:
     matrix:
-      osx_64_numpy1.22python3.10.____cpython:
-        CONFIG: osx_64_numpy1.22python3.10.____cpython
+      osx_64_microarch_level1numpy1.22python3.10.____cpython:
+        CONFIG: osx_64_microarch_level1numpy1.22python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_numpy1.22python3.10.____cpython
-      osx_64_numpy1.22python3.8.____cpython:
-        CONFIG: osx_64_numpy1.22python3.8.____cpython
+        SHORT_CONFIG: osx_64_microarch_level1numpy1.22pyt_h1dca26e0e9
+      osx_64_microarch_level1numpy1.22python3.8.____cpython:
+        CONFIG: osx_64_microarch_level1numpy1.22python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_numpy1.22python3.8.____cpython
-      osx_64_numpy1.22python3.9.____cpython:
-        CONFIG: osx_64_numpy1.22python3.9.____cpython
+        SHORT_CONFIG: osx_64_microarch_level1numpy1.22pyt_h145249f9e5
+      osx_64_microarch_level1numpy1.22python3.9.____cpython:
+        CONFIG: osx_64_microarch_level1numpy1.22python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_numpy1.22python3.9.____cpython
-      osx_64_numpy1.23python3.11.____cpython:
-        CONFIG: osx_64_numpy1.23python3.11.____cpython
+        SHORT_CONFIG: osx_64_microarch_level1numpy1.22pyt_h8d5304a799
+      osx_64_microarch_level1numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_microarch_level1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_numpy1.23python3.11.____cpython
-      osx_64_numpy1.26python3.12.____cpython:
-        CONFIG: osx_64_numpy1.26python3.12.____cpython
+        SHORT_CONFIG: osx_64_microarch_level1numpy1.23pyt_haf05d50abc
+      osx_64_microarch_level1numpy1.26python3.12.____cpython:
+        CONFIG: osx_64_microarch_level1numpy1.26python3.12.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_numpy1.26python3.12.____cpython
+        SHORT_CONFIG: osx_64_microarch_level1numpy1.26pyt_h53581bb33a
+      osx_64_microarch_level3numpy1.22python3.10.____cpython:
+        CONFIG: osx_64_microarch_level3numpy1.22python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_microarch_level3numpy1.22pyt_h62835ed6ac
+      osx_64_microarch_level3numpy1.22python3.8.____cpython:
+        CONFIG: osx_64_microarch_level3numpy1.22python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_microarch_level3numpy1.22pyt_h9dc678df63
+      osx_64_microarch_level3numpy1.22python3.9.____cpython:
+        CONFIG: osx_64_microarch_level3numpy1.22python3.9.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_microarch_level3numpy1.22pyt_h52148d253c
+      osx_64_microarch_level3numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_microarch_level3numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_microarch_level3numpy1.23pyt_hf0eb2a186b
+      osx_64_microarch_level3numpy1.26python3.12.____cpython:
+        CONFIG: osx_64_microarch_level3numpy1.26python3.12.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_microarch_level3numpy1.26pyt_hd440d237f0
+      osx_64_microarch_level4numpy1.22python3.10.____cpython:
+        CONFIG: osx_64_microarch_level4numpy1.22python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_microarch_level4numpy1.22pyt_hef6707ceec
+      osx_64_microarch_level4numpy1.22python3.8.____cpython:
+        CONFIG: osx_64_microarch_level4numpy1.22python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_microarch_level4numpy1.22pyt_h4752e3aa51
+      osx_64_microarch_level4numpy1.22python3.9.____cpython:
+        CONFIG: osx_64_microarch_level4numpy1.22python3.9.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_microarch_level4numpy1.22pyt_hf6d09a35de
+      osx_64_microarch_level4numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_microarch_level4numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_microarch_level4numpy1.23pyt_h250e800edc
+      osx_64_microarch_level4numpy1.26python3.12.____cpython:
+        CONFIG: osx_64_microarch_level4numpy1.26python3.12.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_microarch_level4numpy1.26pyt_hb0d1d71d35
       osx_arm64_numpy1.22python3.10.____cpython:
         CONFIG: osx_arm64_numpy1.22python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
