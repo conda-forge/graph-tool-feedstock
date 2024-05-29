@@ -18,6 +18,11 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_microarch_level1numpy1.22p_h54b34efe15
+      linux_64_microarch_level1numpy1.22python3.9.____73_pypy:
+        CONFIG: linux_64_microarch_level1numpy1.22python3.9.____73_pypy
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        SHORT_CONFIG: linux_64_microarch_level1numpy1.22p_hea027c5047
       linux_64_microarch_level1numpy1.22python3.9.____cpython:
         CONFIG: linux_64_microarch_level1numpy1.22python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -43,6 +48,11 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_microarch_level3numpy1.22p_h5562e6072c
+      linux_64_microarch_level3numpy1.22python3.9.____73_pypy:
+        CONFIG: linux_64_microarch_level3numpy1.22python3.9.____73_pypy
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        SHORT_CONFIG: linux_64_microarch_level3numpy1.22p_h0ad6d705cc
       linux_64_microarch_level3numpy1.22python3.9.____cpython:
         CONFIG: linux_64_microarch_level3numpy1.22python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -68,6 +78,11 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_microarch_level4numpy1.22p_h26c0d0f042
+      linux_64_microarch_level4numpy1.22python3.9.____73_pypy:
+        CONFIG: linux_64_microarch_level4numpy1.22python3.9.____73_pypy
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        SHORT_CONFIG: linux_64_microarch_level4numpy1.22p_hb0d5f5a239
       linux_64_microarch_level4numpy1.22python3.9.____cpython:
         CONFIG: linux_64_microarch_level4numpy1.22python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -93,6 +108,11 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_numpy1.22python3.8.____cpython
+      linux_aarch64_numpy1.22python3.9.____73_pypy:
+        CONFIG: linux_aarch64_numpy1.22python3.9.____73_pypy
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        SHORT_CONFIG: linux_aarch64_numpy1.22python3.9.____73_pypy
       linux_aarch64_numpy1.22python3.9.____cpython:
         CONFIG: linux_aarch64_numpy1.22python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
