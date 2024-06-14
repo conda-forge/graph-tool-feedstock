@@ -26,10 +26,10 @@ source:
 
 build:
   skip: true  # [win]
-  number: {{ build }}          # [not (unix and x86_64)]
-  number: {{ build + 100 }}    # [unix and x86_64 and microarch_level == 1]
-  number: {{ build + 300 }}    # [unix and x86_64 and microarch_level == 3]
-  number: {{ build + 400 }}    # [unix and x86_64 and microarch_level == 4]
+  number: {{ build }}  # [not (unix and x86_64)]
+  number: {{ build + 100 }}  # [unix and x86_64 and microarch_level == 1]
+  number: {{ build + 300 }}  # [unix and x86_64 and microarch_level == 3]
+  number: {{ build + 400 }}  # [unix and x86_64 and microarch_level == 4]
   detect_binary_files_with_prefix: true
 
   # conda-build 3.18.12 uses LIEF instead of patchelf,
