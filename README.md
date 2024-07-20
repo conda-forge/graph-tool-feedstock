@@ -31,13 +31,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_microarch_level1numpy1.22python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level1numpy1.22python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_microarch_level1numpy1.22python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
@@ -45,31 +38,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_microarch_level1numpy1.22python3.9.____cpython</td>
+              <td>linux_64_microarch_level1numpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level1numpy1.22python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level1numpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_microarch_level1numpy1.23python3.11.____cpython</td>
+              <td>linux_64_microarch_level1numpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level1numpy1.23python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level1numpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_microarch_level1numpy1.26python3.12.____cpython</td>
+              <td>linux_64_microarch_level1numpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level1numpy1.26python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level1numpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_microarch_level3numpy1.22python3.10.____cpython</td>
+              <td>linux_64_microarch_level1numpy2.0python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level3numpy1.22python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level1numpy2.0python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -80,31 +73,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_microarch_level3numpy1.22python3.9.____cpython</td>
+              <td>linux_64_microarch_level3numpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level3numpy1.22python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level3numpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_microarch_level3numpy1.23python3.11.____cpython</td>
+              <td>linux_64_microarch_level3numpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level3numpy1.23python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level3numpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_microarch_level3numpy1.26python3.12.____cpython</td>
+              <td>linux_64_microarch_level3numpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level3numpy1.26python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level3numpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_microarch_level4numpy1.22python3.10.____cpython</td>
+              <td>linux_64_microarch_level3numpy2.0python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level4numpy1.22python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level3numpy2.0python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -115,31 +108,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_microarch_level4numpy1.22python3.9.____cpython</td>
+              <td>linux_64_microarch_level4numpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level4numpy1.22python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level4numpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_microarch_level4numpy1.23python3.11.____cpython</td>
+              <td>linux_64_microarch_level4numpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level4numpy1.23python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level4numpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_microarch_level4numpy1.26python3.12.____cpython</td>
+              <td>linux_64_microarch_level4numpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level4numpy1.26python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level4numpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_numpy1.22python3.10.____cpython</td>
+              <td>linux_64_microarch_level4numpy2.0python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy1.22python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_microarch_level4numpy2.0python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -150,31 +143,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_numpy1.22python3.9.____cpython</td>
+              <td>linux_aarch64_numpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy1.22python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_numpy1.23python3.11.____cpython</td>
+              <td>linux_aarch64_numpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy1.23python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_numpy1.26python3.12.____cpython</td>
+              <td>linux_aarch64_numpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy1.26python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_microarch_level1numpy1.22python3.10.____cpython</td>
+              <td>linux_aarch64_numpy2.0python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level1numpy1.22python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy2.0python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -185,31 +178,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_microarch_level1numpy1.22python3.9.____cpython</td>
+              <td>osx_64_microarch_level1numpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level1numpy1.22python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level1numpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_microarch_level1numpy1.23python3.11.____cpython</td>
+              <td>osx_64_microarch_level1numpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level1numpy1.23python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level1numpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_microarch_level1numpy1.26python3.12.____cpython</td>
+              <td>osx_64_microarch_level1numpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level1numpy1.26python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level1numpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_microarch_level3numpy1.22python3.10.____cpython</td>
+              <td>osx_64_microarch_level1numpy2.0python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level3numpy1.22python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level1numpy2.0python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -220,31 +213,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_microarch_level3numpy1.22python3.9.____cpython</td>
+              <td>osx_64_microarch_level3numpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level3numpy1.22python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level3numpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_microarch_level3numpy1.23python3.11.____cpython</td>
+              <td>osx_64_microarch_level3numpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level3numpy1.23python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level3numpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_microarch_level3numpy1.26python3.12.____cpython</td>
+              <td>osx_64_microarch_level3numpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level3numpy1.26python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level3numpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_microarch_level4numpy1.22python3.10.____cpython</td>
+              <td>osx_64_microarch_level3numpy2.0python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level4numpy1.22python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level3numpy2.0python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -255,31 +248,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_microarch_level4numpy1.22python3.9.____cpython</td>
+              <td>osx_64_microarch_level4numpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level4numpy1.22python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level4numpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_microarch_level4numpy1.23python3.11.____cpython</td>
+              <td>osx_64_microarch_level4numpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level4numpy1.23python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level4numpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_microarch_level4numpy1.26python3.12.____cpython</td>
+              <td>osx_64_microarch_level4numpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level4numpy1.26python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level4numpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_numpy1.22python3.10.____cpython</td>
+              <td>osx_64_microarch_level4numpy2.0python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy1.22python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_microarch_level4numpy2.0python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -290,24 +283,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_numpy1.22python3.9.____cpython</td>
+              <td>osx_arm64_numpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy1.22python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_numpy1.23python3.11.____cpython</td>
+              <td>osx_arm64_numpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy1.23python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_numpy1.26python3.12.____cpython</td>
+              <td>osx_arm64_numpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy1.26python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy2.0python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_numpy2.0python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7559&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/graph-tool-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy2.0python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr>
