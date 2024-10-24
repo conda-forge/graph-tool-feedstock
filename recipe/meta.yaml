@@ -1,6 +1,6 @@
-{% set version = "2.77" %}
-{% set sha1 = "949649c6eadab2f3d691953d48aca77b935f920a" %}
-{% set build = 1 %}
+{% set version = "2.78" %}
+{% set sha1 = "59e3a252689068ec7316ba044037748c040fc95b" %}
+{% set build = 0 %}
 
 package:
   name: graph-tool-suite
