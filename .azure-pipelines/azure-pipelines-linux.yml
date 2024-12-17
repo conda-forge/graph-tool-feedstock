@@ -8,86 +8,106 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_microarch_level1python3.10.____cpython:
-        CONFIG: linux_64_microarch_level1python3.10.____cpython
+      linux_64_microarch_level1numpy2.0python3.10.____cpython:
+        CONFIG: linux_64_microarch_level1numpy2.0python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_microarch_level1python3.10.____cpython
-      linux_64_microarch_level1python3.11.____cpython:
-        CONFIG: linux_64_microarch_level1python3.11.____cpython
+        SHORT_CONFIG: linux_64_microarch_level1numpy2.0py_h94118de118
+      linux_64_microarch_level1numpy2.0python3.11.____cpython:
+        CONFIG: linux_64_microarch_level1numpy2.0python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_microarch_level1python3.11.____cpython
-      linux_64_microarch_level1python3.12.____cpython:
-        CONFIG: linux_64_microarch_level1python3.12.____cpython
+        SHORT_CONFIG: linux_64_microarch_level1numpy2.0py_he9d313e591
+      linux_64_microarch_level1numpy2.0python3.12.____cpython:
+        CONFIG: linux_64_microarch_level1numpy2.0python3.12.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_microarch_level1python3.12.____cpython
-      linux_64_microarch_level1python3.9.____cpython:
-        CONFIG: linux_64_microarch_level1python3.9.____cpython
+        SHORT_CONFIG: linux_64_microarch_level1numpy2.0py_hdaaf234582
+      linux_64_microarch_level1numpy2.0python3.9.____cpython:
+        CONFIG: linux_64_microarch_level1numpy2.0python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_microarch_level1python3.9.____cpython
-      linux_64_microarch_level3python3.10.____cpython:
-        CONFIG: linux_64_microarch_level3python3.10.____cpython
+        SHORT_CONFIG: linux_64_microarch_level1numpy2.0py_h1387f0573d
+      linux_64_microarch_level1numpy2python3.13.____cp313:
+        CONFIG: linux_64_microarch_level1numpy2python3.13.____cp313
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_microarch_level3python3.10.____cpython
-      linux_64_microarch_level3python3.11.____cpython:
-        CONFIG: linux_64_microarch_level3python3.11.____cpython
+        SHORT_CONFIG: linux_64_microarch_level1numpy2pyth_hc1c6697a83
+      linux_64_microarch_level3numpy2.0python3.10.____cpython:
+        CONFIG: linux_64_microarch_level3numpy2.0python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_microarch_level3python3.11.____cpython
-      linux_64_microarch_level3python3.12.____cpython:
-        CONFIG: linux_64_microarch_level3python3.12.____cpython
+        SHORT_CONFIG: linux_64_microarch_level3numpy2.0py_h44e9e8f423
+      linux_64_microarch_level3numpy2.0python3.11.____cpython:
+        CONFIG: linux_64_microarch_level3numpy2.0python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_microarch_level3python3.12.____cpython
-      linux_64_microarch_level3python3.9.____cpython:
-        CONFIG: linux_64_microarch_level3python3.9.____cpython
+        SHORT_CONFIG: linux_64_microarch_level3numpy2.0py_h88c49acbec
+      linux_64_microarch_level3numpy2.0python3.12.____cpython:
+        CONFIG: linux_64_microarch_level3numpy2.0python3.12.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_microarch_level3python3.9.____cpython
-      linux_64_microarch_level4python3.10.____cpython:
-        CONFIG: linux_64_microarch_level4python3.10.____cpython
+        SHORT_CONFIG: linux_64_microarch_level3numpy2.0py_ha71eda4bb2
+      linux_64_microarch_level3numpy2.0python3.9.____cpython:
+        CONFIG: linux_64_microarch_level3numpy2.0python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_microarch_level4python3.10.____cpython
-      linux_64_microarch_level4python3.11.____cpython:
-        CONFIG: linux_64_microarch_level4python3.11.____cpython
+        SHORT_CONFIG: linux_64_microarch_level3numpy2.0py_h7c82604e87
+      linux_64_microarch_level3numpy2python3.13.____cp313:
+        CONFIG: linux_64_microarch_level3numpy2python3.13.____cp313
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_microarch_level4python3.11.____cpython
-      linux_64_microarch_level4python3.12.____cpython:
-        CONFIG: linux_64_microarch_level4python3.12.____cpython
+        SHORT_CONFIG: linux_64_microarch_level3numpy2pyth_h9d5e79d311
+      linux_64_microarch_level4numpy2.0python3.10.____cpython:
+        CONFIG: linux_64_microarch_level4numpy2.0python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_microarch_level4python3.12.____cpython
-      linux_64_microarch_level4python3.9.____cpython:
-        CONFIG: linux_64_microarch_level4python3.9.____cpython
+        SHORT_CONFIG: linux_64_microarch_level4numpy2.0py_hffa5b01016
+      linux_64_microarch_level4numpy2.0python3.11.____cpython:
+        CONFIG: linux_64_microarch_level4numpy2.0python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_microarch_level4python3.9.____cpython
-      linux_aarch64_python3.10.____cpython:
-        CONFIG: linux_aarch64_python3.10.____cpython
+        SHORT_CONFIG: linux_64_microarch_level4numpy2.0py_h8921b22dcd
+      linux_64_microarch_level4numpy2.0python3.12.____cpython:
+        CONFIG: linux_64_microarch_level4numpy2.0python3.12.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_aarch64_python3.10.____cpython
-      linux_aarch64_python3.11.____cpython:
-        CONFIG: linux_aarch64_python3.11.____cpython
+        SHORT_CONFIG: linux_64_microarch_level4numpy2.0py_h7fd16751b0
+      linux_64_microarch_level4numpy2.0python3.9.____cpython:
+        CONFIG: linux_64_microarch_level4numpy2.0python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_aarch64_python3.11.____cpython
-      linux_aarch64_python3.12.____cpython:
-        CONFIG: linux_aarch64_python3.12.____cpython
+        SHORT_CONFIG: linux_64_microarch_level4numpy2.0py_ha6217203a7
+      linux_64_microarch_level4numpy2python3.13.____cp313:
+        CONFIG: linux_64_microarch_level4numpy2python3.13.____cp313
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_aarch64_python3.12.____cpython
-      linux_aarch64_python3.9.____cpython:
-        CONFIG: linux_aarch64_python3.9.____cpython
+        SHORT_CONFIG: linux_64_microarch_level4numpy2pyth_hd28830f381
+      linux_aarch64_numpy2.0python3.10.____cpython:
+        CONFIG: linux_aarch64_numpy2.0python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_aarch64_python3.9.____cpython
+        SHORT_CONFIG: linux_aarch64_numpy2.0python3.10.____cpython
+      linux_aarch64_numpy2.0python3.11.____cpython:
+        CONFIG: linux_aarch64_numpy2.0python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_numpy2.0python3.11.____cpython
+      linux_aarch64_numpy2.0python3.12.____cpython:
+        CONFIG: linux_aarch64_numpy2.0python3.12.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_numpy2.0python3.12.____cpython
+      linux_aarch64_numpy2.0python3.9.____cpython:
+        CONFIG: linux_aarch64_numpy2.0python3.9.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_numpy2.0python3.9.____cpython
+      linux_aarch64_numpy2python3.13.____cp313:
+        CONFIG: linux_aarch64_numpy2python3.13.____cp313
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_numpy2python3.13.____cp313
   timeoutInMinutes: 360
   variables: {}
 
