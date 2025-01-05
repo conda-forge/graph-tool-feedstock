@@ -6,7 +6,7 @@ index f3f3192e..c8779c76 100644
                      CGAL::convex_hull_2(points.begin(),points.end(),std::back_inserter(result));
                      //std::cout << result.size() << " points on the convex hull" << std::endl;]
                      ])]
--                    ,[ac_cgal=yes],[ac_cgal=no])
+-                    ,[ac_cgal=yes],[ac_cgal=no],[ac_cgal=yes])
 +
 +                    dnl Third option here is the cross-compiling case
 +                    dnl https://www.gnu.org/software/autoconf/manual/autoconf-2.63/html_node/Runtime.html
