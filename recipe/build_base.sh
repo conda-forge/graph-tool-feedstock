@@ -53,6 +53,13 @@ LDFLAGS=$(echo "${LDFLAGS}" | sed "s/-O2/-O3/g")
 # Get an updated config.sub and config.guess
 cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
 
+# LTO reduces both memory usage and compilation time
+if [[ ${target_platform} = osx* ]]; then
+    MOD_CXXFLAGS="" # clang crashes on some platforms with LTO
+else
+    MOD_CXXFLAGS="-flto=${CPU_COUNT}"
+fi
+
 ./configure \
     --prefix="${PREFIX}" \
     --with-boost="${BOOST_ROOT}" \
@@ -65,15 +72,12 @@ cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
     PYTHON_VERSION=${PY_VER} \
     PYTHON_LIBS="${PYTHON_LIBS}" \
     --with-python-prefix=${PREFIX} \
+    MOD_CXXFLAGS=${MOD_CXXFLAGS} \
 || { cat config.log ; exit 1 ; }
 
 echo "[all] Starting make"
 
-if [[ ${target_platform} == osx* ]]; then
-    make -j3
-else
-    make -j2
-fi
+make -j 3
 
 # Test
 #LD_LIBRARY_PATH=${PREFIX}/lib make check

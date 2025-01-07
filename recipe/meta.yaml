@@ -1,5 +1,5 @@
-{% set version = "2.80" %}
-{% set sha1 = "6a4ec94ddaf44a31566c808fc730e40ddec1666f" %}
+{% set version = "2.83" %}
+{% set sha1 = "0cf97b00540f15c2eee7e1478f27ab8937e03d7b" %}
 {% set build = 0 %}
 
 package:
@@ -50,7 +50,7 @@ outputs:
       # but respect them in the 'graph-tool' package (see below).
       ignore_run_exports_from:
         - pycairo
-        - cairomm-1.16
+        - cairomm
         - glib
     requirements:
       build:
@@ -79,7 +79,12 @@ outputs:
         - gmp
         - cgal-cpp 5.6*
         - sparsehash 2.0*
-        - cairomm-1.16
+        - zlib
+        - xorg-xproto
+        - xorg-kbproto
+        - xorg-xextproto
+        - xorg-renderproto
+        - cairomm
         - pycairo
         - glib
       run:
@@ -107,13 +112,13 @@ outputs:
         # I think we might need to list these build-time dependencies here
         # to ensure that the runtime dependencies are properly pinned.
         - python
-        - cairomm-1.16
+        - cairomm
         - pycairo
         - glib
       run:
         - python
         - {{ pin_subpackage('graph-tool-base', exact=True) }}
-        - cairomm-1.16
+        - cairomm
         - pycairo
         - gdk-pixbuf
         - librsvg
