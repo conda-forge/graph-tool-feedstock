@@ -88,6 +88,7 @@ jobs:
         CONFIG: osx_arm64_numpy2python3.13.____cp313
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_numpy2python3.13.____cp313
+    maxParallel: 10
   timeoutInMinutes: 360
   variables: {}
 
