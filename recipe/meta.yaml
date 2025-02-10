@@ -24,6 +24,9 @@ source:
     #- patches/skip-cgal-check.patch  # [build_platform != target_platform]
     - patches/skip-cgal-check.patch
 
+    # Get around MacOS' clang bugs
+    - patches/0001-Fix-compilation-with-older-buggy-clang-versions.patch
+
 build:
   skip: true  # [win]
   number: {{ build }}  # [not (unix and x86_64)]
