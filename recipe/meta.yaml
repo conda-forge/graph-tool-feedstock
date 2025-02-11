@@ -1,5 +1,5 @@
-{% set version = "2.90" %}
-{% set sha1 = "f00921fbbe8c04e1abea5b070e9b813a61ddf3e6" %}
+{% set version = "2.91" %}
+{% set sha1 = "ca6968754281f7c94b54d81731f322d81efd2db2" %}
 {% set build = 0 %}
 
 package:
@@ -23,9 +23,6 @@ source:
     # Just trust the location we pass via --with-cgal
     #- patches/skip-cgal-check.patch  # [build_platform != target_platform]
     - patches/skip-cgal-check.patch
-
-    # Get around MacOS' clang bugs
-    - patches/0001-Fix-compilation-with-older-buggy-clang-versions.patch
 
 build:
   skip: true  # [win]
