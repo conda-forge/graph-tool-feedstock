@@ -1,5 +1,5 @@
-{% set version = "2.95" %}
-{% set sha1 = "d543d45880a85ba4fae29e31c0b26ee9da03c0de" %}
+{% set version = "2.96" %}
+{% set sha1 = "ac269cb1bb868e406b022040820969335bcaa67f" %}
 {% set build = 0 %}
 
 package:
