@@ -102,6 +102,8 @@ outputs:
         - test_base_deps.sh
         - test_base_imports.py
       commands:
+        - echo $CROSSCOMPILING_EMULATOR bash test_base_deps.sh
+        - echo $CROSSCOMPILING_EMULATOR python test_base_imports.py
         - $CROSSCOMPILING_EMULATOR bash test_base_deps.sh
         - $CROSSCOMPILING_EMULATOR python test_base_imports.py
 
@@ -129,6 +131,7 @@ outputs:
       files:
         - test_all_imports.py
       commands:
+        - echo $CROSSCOMPILING_EMULATOR python test_all_imports.py
         - $CROSSCOMPILING_EMULATOR python test_all_imports.py
 
 about:
