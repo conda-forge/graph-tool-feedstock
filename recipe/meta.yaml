@@ -25,7 +25,7 @@ source:
     - patches/skip-cgal-check.patch
 
 build:
-  skip: true  # [win]
+  skip: true  # [not linux64 or (py != 39 and microarch_level != 4)]
   number: {{ build }}  # [not (unix and x86_64)]
   number: {{ build + 100 }}  # [unix and x86_64 and microarch_level == 1]
   number: {{ build + 300 }}  # [unix and x86_64 and microarch_level == 3]
@@ -67,7 +67,7 @@ outputs:
         - {{ compiler("cxx") }}
         - {{ stdlib("c") }}
         - llvm-openmp           # [osx]
-        - x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64 and microarch_level < 4]
+        - x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64]
       host:
         - python
         - setuptools
@@ -95,15 +95,17 @@ outputs:
         - gmp
         - sparsehash >=2.0
         - zstandard
-        - _x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64 and microarch_level == 4]
+        - _x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64]
 
     test:
       files:
-        - test_base_deps.sh            # [microarch_level < 4]
-        - test_base_imports.py         # [microarch_level < 4]
+        - test_base_deps.sh
+        - test_base_imports.py
       commands:
-        - bash test_base_deps.sh       # [microarch_level < 4]
-        - python test_base_imports.py  # [microarch_level < 4]
+        - echo {{ CROSSCOMPILING_EMULATOR|default("") }} bash test_base_deps.sh
+        - echo {{ CROSSCOMPILING_EMULATOR|default("") }} python test_base_imports.py
+        - {{ CROSSCOMPILING_EMULATOR|default("") }} bash test_base_deps.sh
+        - {{ CROSSCOMPILING_EMULATOR|default("") }} python test_base_imports.py
 
   - name: graph-tool
     requirements:
@@ -127,9 +129,10 @@ outputs:
         - matplotlib-base
     test:
       files:
-        - test_all_imports.py         # [microarch_level < 4]
+        - test_all_imports.py
       commands:
-        - python test_all_imports.py  # [microarch_level < 4]
+        - echo {{ CROSSCOMPILING_EMULATOR|default("") }} python test_all_imports.py
+        - {{ CROSSCOMPILING_EMULATOR|default("") }} python test_all_imports.py
 
 about:
   home: https://graph-tool.skewed.de/
