@@ -1,9 +1,9 @@
 azure:
   free_disk_space: true
+  max_parallel: 20
   settings_linux:
     swapfile_size: 10GiB
   store_build_artifacts: true
-  max_parallel: 20
 bot:
   automerge: true
 build_platform:
