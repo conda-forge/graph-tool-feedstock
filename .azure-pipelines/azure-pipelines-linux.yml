@@ -28,6 +28,11 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_microarch_level1python3.13.____cp313
+      linux_64_microarch_level1python3.14.____cp314:
+        CONFIG: linux_64_microarch_level1python3.14.____cp314
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_64_microarch_level1python3.14.____cp314
       linux_64_microarch_level3python3.10.____cpython:
         CONFIG: linux_64_microarch_level3python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -48,6 +53,11 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_microarch_level3python3.13.____cp313
+      linux_64_microarch_level3python3.14.____cp314:
+        CONFIG: linux_64_microarch_level3python3.14.____cp314
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_64_microarch_level3python3.14.____cp314
       linux_64_microarch_level4python3.10.____cpython:
         CONFIG: linux_64_microarch_level4python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -68,6 +78,11 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_64_microarch_level4python3.13.____cp313
+      linux_64_microarch_level4python3.14.____cp314:
+        CONFIG: linux_64_microarch_level4python3.14.____cp314
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_64_microarch_level4python3.14.____cp314
       linux_aarch64_python3.10.____cpython:
         CONFIG: linux_aarch64_python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -88,6 +103,11 @@ jobs:
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
         SHORT_CONFIG: linux_aarch64_python3.13.____cp313
+      linux_aarch64_python3.14.____cp314:
+        CONFIG: linux_aarch64_python3.14.____cp314
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+        SHORT_CONFIG: linux_aarch64_python3.14.____cp314
     maxParallel: 10
   timeoutInMinutes: 360
   variables: {}
@@ -115,10 +135,17 @@ jobs:
          df -h
     displayName: Manage disk space
   - script: |
-         sudo fallocate -l 10GiB /swapfile || true
-         sudo chmod 600 /swapfile || true
-         sudo mkswap /swapfile || true
-         sudo swapon /swapfile || true
+        SWAPFILE=/swapfile
+        # If there is already a swapfile, disable it and remove it
+        if swapon --show | grep -q $SWAPFILE; then
+            echo "Disabling existing swapfile..."
+            sudo swapoff $SWAPFILE || true
+        fi
+        [ -f "$SWAPFILE" ] && sudo rm -f $SWAPFILE
+        sudo fallocate -l 10GiB $SWAPFILE
+        sudo chmod 600 $SWAPFILE
+        sudo mkswap $SWAPFILE
+        sudo swapon $SWAPFILE
     displayName: Create swap file
   # configure qemu binfmt-misc running.  This allows us to run docker containers
   # embedded qemu-static
