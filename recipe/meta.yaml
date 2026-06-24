@@ -66,9 +66,10 @@ outputs:
         - automake
         - gnuconfig
         - pkg-config
-        - {{ compiler("cxx") }}
+        - gxx_linux-64=15.2      # [linux]
+        - {{ compiler('gxx') }}  # [osx]        
         - {{ stdlib("c") }}
-        - llvm-openmp           # [osx]
+        - llvm-openmp            # [osx]
         - x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64 and microarch_level < 4]
       host:
         - python
