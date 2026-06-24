@@ -1,4 +1,4 @@
-{% set version = "2.98" %}
+{% set version = "2.99" %}
 {% set sha1 = "81b4c76ffed2e881ce56e043ecc9044eba5daf4a" %}
 {% set build = 3 %}
 
@@ -7,9 +7,10 @@ package:
   version: "{{ version }}"
 
 source:
-  fn: graph-tool-{{ version }}.tar.bz2
-  url: https://downloads.skewed.de/graph-tool/graph-tool-{{ version }}.tar.bz2
-  sha1: {{ sha1 }}
+  git_url: https://git.skewed.de/count0/graph-tool.git
+#  fn: graph-tool-{{ version }}.tar.bz2
+#  url: https://downloads.skewed.de/graph-tool/graph-tool-{{ version }}.tar.bz2
+#  sha1: {{ sha1 }}
 
   patches:
     # Don't let configure test the python configuration via a test module;
@@ -78,8 +79,7 @@ outputs:
         - expat
         - scipy >=1.0
         - gmp
-        - cgal-cpp # 5.6*
-        - sparsehash 2.0*
+        - cgal-cpp
         - zlib
         - xorg-xproto
         - xorg-kbproto
@@ -94,7 +94,6 @@ outputs:
         - expat
         - scipy >=1.0
         - gmp
-        - sparsehash >=2.0
         - zstandard
         - _x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64 and microarch_level == 4]
 

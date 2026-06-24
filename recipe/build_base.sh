@@ -4,7 +4,7 @@ set -x
 
 # We do want -O3 (the default CXXFLAGS imposes -O2)
 export CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
-export CXXFLAGS="${CXXFLAGS} -I${PREFIX}/include -std=c++17 -O3"
+export CXXFLAGS="${CXXFLAGS} -I${PREFIX}/include -std=gnu++23 -O3"
 export LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
 
 export BOOST_ROOT="${PREFIX}"
