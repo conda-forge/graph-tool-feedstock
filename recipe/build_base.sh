@@ -2,6 +2,10 @@
 
 set -x
 
+if [[ ${target_platform} = osx* ]]; then
+    export CXX=clang++
+fi
+
 # We do want -O3 (the default CXXFLAGS imposes -O2)
 export CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
 export CXXFLAGS="${CXXFLAGS} -I${PREFIX}/include -std=gnu++23 -O3"
@@ -78,9 +82,9 @@ fi
 echo "[all] Starting make"
 
 if [[ $target_platform == osx* ]]; then
-    make -j 10
+    make -j 10 V=1
 else
-    make -j 16
+    make -j 16 V=1
 fi
 
 # Test
