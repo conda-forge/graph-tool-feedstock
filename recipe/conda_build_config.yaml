@@ -2,3 +2,8 @@ microarch_level:
   - 1
   - 3  # [unix and x86_64]
   - 4  # [unix and x86_64]
+
+github_actions_labels:                # [unix]
+- blacksmith-16vcpu-ubuntu-2404       # [linux64]
+- blacksmith-16vcpu-ubuntu-2404-arm   # [linux and aarch64]
+- blacksmith-12vcpu-macos-latest      # [osx]

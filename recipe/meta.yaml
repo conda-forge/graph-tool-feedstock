@@ -1,10 +1,10 @@
 {% set version = "2.98" %}
 {% set sha1 = "81b4c76ffed2e881ce56e043ecc9044eba5daf4a" %}
-{% set build = 1 %}
+{% set build = 2 %}
 
 package:
   name: graph-tool-suite
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   fn: graph-tool-{{ version }}.tar.bz2
