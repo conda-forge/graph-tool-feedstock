@@ -28,6 +28,8 @@ source:
 build:
   skip: true  # [win]
   skip: true  # [osx and x86_64]
+  # There seems to be a problem with boost 1.90 and aarch64; skip for the time being
+  skip: true  # [linux and aarch64]
   number: {{ build }}  # [not (unix and x86_64)]
   number: {{ build + 100 }}  # [unix and x86_64 and microarch_level == 1]
   number: {{ build + 300 }}  # [unix and x86_64 and microarch_level == 3]

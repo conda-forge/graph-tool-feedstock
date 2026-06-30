@@ -14,10 +14,3 @@ cxx_compiler:           # [osx]
   - clangxx             # [osx]
 cxx_compiler_version:   # [osx]
   - 22                  # [osx]
-
-libboost_devel:
-- "1.91"
-libboost_headers:
-- "1.91"
-libboost_python_devel:
-- "1.91"
