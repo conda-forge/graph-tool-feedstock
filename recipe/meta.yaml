@@ -77,7 +77,7 @@ outputs:
         - expat
         - scipy >=1.0
         - gmp
-        - cgal-cpp 5.6*
+        - cgal-cpp # 5.6*
         - sparsehash 2.0*
         - zlib
         - xorg-xproto
