@@ -26,6 +26,7 @@ source:
 
 build:
   skip: true  # [win]
+  skip: true  # [osx and x86_64]
   number: {{ build }}  # [not (unix and x86_64)]
   number: {{ build + 100 }}  # [unix and x86_64 and microarch_level == 1]
   number: {{ build + 300 }}  # [unix and x86_64 and microarch_level == 3]
