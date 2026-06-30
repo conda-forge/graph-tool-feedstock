@@ -77,7 +77,11 @@ fi
 
 echo "[all] Starting make"
 
-make -j 3
+if [[ $target_platform == osx* ]]; then
+    make -j 10
+else
+    make -j 16
+fi
 
 # Test
 #LD_LIBRARY_PATH=${PREFIX}/lib make check

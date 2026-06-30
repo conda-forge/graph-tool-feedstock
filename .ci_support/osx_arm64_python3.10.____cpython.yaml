@@ -18,14 +18,16 @@ expat:
 - '2'
 gdk_pixbuf:
 - '2'
+github_actions_labels:
+- blacksmith-12vcpu-macos-latest
 glib:
 - '2'
 gmp:
 - '6'
 libboost_devel:
-- '1.86'
+- '1.88'
 libboost_python_devel:
-- '1.86'
+- '1.88'
 llvm_openmp:
 - '19'
 macos_machine:
