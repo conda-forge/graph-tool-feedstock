@@ -147,6 +147,7 @@ about:
     - licenses/pcg-cpp/LICENSE-MIT.txt
 
 extra:
+  feedstock-name: graph-tool
   recipe-maintainers:
     - stuarteberg
     - ostrokach
