@@ -18,8 +18,6 @@ expat:
 - '2'
 gdk_pixbuf:
 - '2'
-github_actions_labels:
-- blacksmith-12vcpu-macos-latest
 glib:
 - '2'
 gmp:
