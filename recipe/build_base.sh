@@ -57,12 +57,12 @@ LDFLAGS=$(echo "${LDFLAGS}" | sed "s/-O2/-O3/g")
 # Get an updated config.sub and config.guess
 cp ${BUILD_PREFIX}/share/gnuconfig/config.* build-aux/
 
-# LTO reduces both memory usage and compilation time
-if [[ ${target_platform} = osx* ]]; then
-    MOD_CXXFLAGS="" # clang crashes on some platforms with LTO
-else
-    MOD_CXXFLAGS="-flto=${CPU_COUNT}"
-fi
+# # LTO reduces both memory usage and compilation time
+# if [[ ${target_platform} = osx* ]]; then
+#     MOD_CXXFLAGS="" # clang crashes on some platforms with LTO
+# else
+#     MOD_CXXFLAGS="-flto=${CPU_COUNT}"
+# fi
 
 ./configure \
     --prefix="${PREFIX}" \
