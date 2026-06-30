@@ -15,9 +15,9 @@ glib:
 gmp:
 - '6'
 libboost_devel:
-- '1.90'
+- '1.91'
 libboost_python_devel:
-- '1.90'
+- '1.91'
 microarch_level:
 - '1'
 numpy:
