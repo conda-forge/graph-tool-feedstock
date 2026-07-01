@@ -52,6 +52,12 @@ CFLAGS=$(echo "${CFLAGS}" | sed "s/-O2/-O3/g")
 CXXFLAGS=$(echo "${CXXFLAGS}" | sed "s/-O2/-O3/g")
 LDFLAGS=$(echo "${LDFLAGS}" | sed "s/-O2/-O3/g")
 
+if [[ $target_platform == osx* ]]; then
+    sed -i '' "s/-fvisibility=hidden -fvisibility-inlines-hidden -fno-semantic-interposition//g" configure.ac
+else
+    sed -i "s/-fvisibility=hidden -fvisibility-inlines-hidden -fno-semantic-interposition//g" configure.ac
+fi
+
 ./autogen.sh
 
 # Get an updated config.sub and config.guess
