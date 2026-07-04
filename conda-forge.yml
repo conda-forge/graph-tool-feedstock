@@ -14,8 +14,7 @@ provider:
   linux_aarch64: github_actions
   osx_arm64: github_actions
 test: native_and_emulated
-workflow_settings: 
+workflow_settings:
   free_disk_space: quick
   pagefile_size: 10
   store_build_artifacts: true
-  
