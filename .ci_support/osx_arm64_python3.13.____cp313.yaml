@@ -17,9 +17,9 @@ glib:
 gmp:
 - '6'
 libboost_devel:
-- '1.90'
+- '1.91'
 libboost_python_devel:
-- '1.90'
+- '1.91'
 llvm_openmp:
 - '19'
 macos_machine:
