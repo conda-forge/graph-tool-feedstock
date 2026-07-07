@@ -1,6 +1,6 @@
-{% set version = "2.98" %}
-{% set sha1 = "81b4c76ffed2e881ce56e043ecc9044eba5daf4a" %}
-{% set build = 3 %}
+{% set version = "3.0" %}
+{% set sha1 = "cb8a3e39b1e288852beb0e6700f17acaa1a201f1" %}
+{% set build = 0 %}
 
 package:
   name: graph-tool-suite
@@ -27,6 +27,8 @@ source:
 build:
   skip: true  # [win]
   skip: true  # [osx and x86_64]
+  # There seems to be a problem with boost 1.90 and aarch64; skip for the time being
+  skip: true  # [linux and aarch64]
   number: {{ build }}  # [not (unix and x86_64)]
   number: {{ build + 100 }}  # [unix and x86_64 and microarch_level == 1]
   number: {{ build + 300 }}  # [unix and x86_64 and microarch_level == 3]
@@ -65,9 +67,9 @@ outputs:
         - automake
         - gnuconfig
         - pkg-config
-        - {{ compiler("cxx") }}
-        - {{ stdlib("c") }}
-        - llvm-openmp           # [osx]
+        - gxx_linux-64=15.2      # [linux]
+        - clangxx=22.1.8         # [osx]        
+        - llvm-openmp=22.1.8     # [osx]
         - x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64 and microarch_level < 4]
       host:
         - python
@@ -78,8 +80,7 @@ outputs:
         - expat
         - scipy >=1.0
         - gmp
-        - cgal-cpp # 5.6*
-        - sparsehash 2.0*
+        - cgal-cpp
         - zlib
         - xorg-xproto
         - xorg-kbproto
@@ -94,7 +95,6 @@ outputs:
         - expat
         - scipy >=1.0
         - gmp
-        - sparsehash >=2.0
         - zstandard
         - _x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64 and microarch_level == 4]
 

@@ -5,7 +5,7 @@ index 10d4142e..af60b65f 100644
 @@ -139,7 +139,9 @@ AC_SUBST(MOD_DIR)
  
  dnl boost
- AX_BOOST_BASE([[1.58.0]])
+ AX_BOOST_BASE([[1.84.0]])
 -AX_BOOST_PYTHON
 +#AX_BOOST_PYTHON
 +AC_DEFINE([HAVE_BOOST_PYTHON], [1], "We know boost-python is available in this conda-forge recipe")
