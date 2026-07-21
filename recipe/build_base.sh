@@ -34,16 +34,9 @@ export BOOST_PYTHON_LIB=boost_python${CONDA_PY}
 PYTHON_LIBS=" "
 
 if [[ $target_platform == osx* ]]; then
-    # Don't resolve python symbols until runtime.
-    # See note above about PYTHON_LIBS.
-    export LDFLAGS="${LDFLAGS} -undefined dynamic_lookup"
-
     # https://github.com/conda-forge/graph-tool-feedstock/pull/111#issuecomment-1614192174
     # https://conda-forge.org/docs/maintainer/knowledge_base.html#newer-c-features-with-old-sdk
     export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
-
-    # workaround DSO issues with hidden symbols + RTTI
-    export CXXFLAGS="${CXXFLAGS} -fvisibility=default"
 fi
 
 if [[ "${microarch_level}" == "4" ]]; then
