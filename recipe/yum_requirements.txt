@@ -7,4 +7,3 @@ libXfixes
 libXi
 libXinerama
 libXrandr
-xorg-x11-server-Xorg
