@@ -48,6 +48,9 @@ CFLAGS=$(echo "${CFLAGS}" | sed "s/-O2/-O3/g")
 CXXFLAGS=$(echo "${CXXFLAGS}" | sed "s/-O2/-O3/g")
 LDFLAGS=$(echo "${LDFLAGS}" | sed "s/-O2/-O3/g")
 
+# fix for missing xproto pkgconfig
+export PKG_CONFIG_LIBDIR=/usr/lib64/pkgconfig:/usr/share/pkgconfig
+
 ./autogen.sh
 
 # Get an updated config.sub and config.guess

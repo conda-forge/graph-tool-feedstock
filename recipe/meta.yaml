@@ -112,7 +112,6 @@ outputs:
         - cairomm
         - pycairo
         - glib
-        - xorg-xorgproto
       run:
         - python
         - {{ pin_subpackage('graph-tool-base', exact=True) }}
