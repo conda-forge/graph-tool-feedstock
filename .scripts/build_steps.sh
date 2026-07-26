@@ -55,7 +55,7 @@ ulimit -n 1024
 # "recipe/yum_requirements.txt" file. After updating that file,
 # run "conda smithy rerender" and this line will be updated
 # automatically.
-/usr/bin/sudo -n yum install -y libX11 libXcomposite libXcursor libXdamage libXext libXfixes libXi libXinerama libXrandr xorg-x11-server-Xwayland xorg-x11-proto-devel
+/usr/bin/sudo -n yum install -y libX11 libXcomposite libXcursor libXdamage libXext libXfixes libXi libXinerama libXrandr xorg-x11-server-Xwayland xorg-x11-proto-devel xorg-x11-server-devel
 )
 
 # make the build number clobber
