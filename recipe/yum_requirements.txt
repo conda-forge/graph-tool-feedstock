@@ -7,4 +7,5 @@ libXfixes
 libXi
 libXinerama
 libXrandr
-xorg-x11-server-Xorg
+xorg-x11-server-Xwayland
+xorg-x11-proto-devel

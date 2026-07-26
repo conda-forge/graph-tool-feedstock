@@ -1,6 +1,6 @@
-{% set version = "3.0" %}
-{% set sha1 = "cb8a3e39b1e288852beb0e6700f17acaa1a201f1" %}
-{% set build = 1 %}
+{% set version = "3.1" %}
+{% set sha1 = "8716f9f66e0e3ea47b2458f58fc8ec18023cf561" %}
+{% set build = 0 %}
 
 package:
   name: graph-tool-suite
@@ -67,9 +67,9 @@ outputs:
         - automake
         - gnuconfig
         - pkg-config
-        - gxx_linux-64=15.2      # [linux]
-        - clangxx=22.1.8         # [osx]        
-        - llvm-openmp=22.1.8     # [osx]
+        - gxx_linux-64 >=15.2      # [linux]
+        - clangxx >=22.1.8         # [osx]        
+        - llvm-openmp >=22.1.8     # [osx]
         - x86_64-microarch-level {{ microarch_level }}  # [unix and x86_64 and microarch_level < 4]
       host:
         - python
@@ -82,10 +82,6 @@ outputs:
         - gmp
         - cgal-cpp
         - zlib
-        - xorg-xproto
-        - xorg-kbproto
-        - xorg-xextproto
-        - xorg-renderproto
         - cairomm
         - pycairo
         - glib
