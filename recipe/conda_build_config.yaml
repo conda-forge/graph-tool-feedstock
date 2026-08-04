@@ -15,5 +15,11 @@ cxx_compiler:           # [osx]
 cxx_compiler_version:   # [osx]
   - 22                  # [osx]
 
+# attempt to force glibc to 2.17
+os_version:
+  linux_64: alma9
+  linux_aarch64: alma9
+  linux_ppc64le: alma9
+
 c_stdlib_version:          # [linux]
   - "2.17"                 # [linux]
